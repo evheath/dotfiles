@@ -1,0 +1,39 @@
+#  ███████╗███████╗███████╗██╗  ██╗     ██████╗ ██████╗ ███╗   ██╗███████╗██╗ ██████╗ 
+#  ██╔════╝██╔════╝██╔════╝██║  ██║    ██╔════╝██╔═══██╗████╗  ██║██╔════╝██║██╔════╝ 
+#  ███████╗█████╗  ███████╗███████║    ██║     ██║   ██║██╔██╗ ██║█████╗  ██║██║  ███╗
+#  ╚════██║██╔══╝  ╚════██║██╔══██║    ██║     ██║   ██║██║╚██╗██║██╔══╝  ██║██║   ██║
+#  ███████║███████╗███████║██║  ██║    ╚██████╗╚██████╔╝██║ ╚████║██║     ██║╚██████╔╝
+#  ╚══════╝╚══════╝╚══════╝╚═╝  ╚═╝     ╚═════╝ ╚═════╝ ╚═╝  ╚═══╝╚═╝     ╚═╝ ╚═════╝ 
+#
+#  Smart session manager for the terminal
+#  https://github.com/joshmedeski/sesh
+
+[default_session]
+startup_command = "vim -c ':Telescope find_files'"
+startup_command_ignore_dirs = ["~/"]
+
+# configs
+
+[[session]]
+name = "nvim config"
+path = "~/.dotfiles/nvim"
+
+[[session]]
+name = "sesh config"
+path = "~/.dotfiles/sesh"
+startup_command = "vim sesh.toml"
+
+[[session]]
+name = "tmux config"
+path = "~/.dotfiles/tmux"
+startup_command = "vim tmux.conf"
+
+[[session]]
+name = "zsh config"
+path = "~/.dotfiles/zsh"
+startup_command = "vim .zshrc"
+
+[[session]]
+name = "alacritty config"
+path = "~/.config/alacritty"
+startup_command = "vim alacritty.toml"
