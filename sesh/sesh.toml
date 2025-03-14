@@ -37,3 +37,7 @@ startup_command = "vim .zshrc"
 name = "alacritty config"
 path = "~/.dotfiles/alacritty"
 startup_command = "vim alacritty.toml"
+
+[[session]]
+name = "dotfiles"
+path = "~/.dotfiles"
