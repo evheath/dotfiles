@@ -35,5 +35,5 @@ startup_command = "vim .zshrc"
 
 [[session]]
 name = "alacritty config"
-path = "~/.config/alacritty"
+path = "~/.dotfiles/alacritty"
 startup_command = "vim alacritty.toml"
