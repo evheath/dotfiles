@@ -1,0 +1,11 @@
+# https://github.com/jesseduffield/lazygit/blob/master/docs/Config.md
+gui:
+  # splitDiff: always
+  # mainPanelSplitMode: horizontal
+  showFileTree: false
+  sidePanelWidth: 0.2
+# git:
+#   paging:
+#     colorArg: always
+#     # pager: delta --side-by-side --paging=never
+#     pager: delta --paging=never --dark --side-by-side

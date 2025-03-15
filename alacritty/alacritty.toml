@@ -15,3 +15,6 @@ size = 16
 
 [window]
 startup_mode = "Fullscreen"
+
+[mouse]
+hide_when_typing = true
