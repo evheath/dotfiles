@@ -83,6 +83,7 @@ export PATH="$PNPM_HOME:$PATH"
 
 export EDITOR="/Applications/Visual\ Studio\ Code.app/Contents/MacOS/Electron"
 alias vim='nvim'
+alias lg='lazygit'
 export XDG_CONFIG_HOME="$HOME/.config"
 
 # select tmux sessions with Ctrl+s

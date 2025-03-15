@@ -8,6 +8,10 @@
 #  Smart session manager for the terminal
 #  https://github.com/joshmedeski/sesh
 
+blacklist = [
+    "scratch",
+]
+
 [default_session]
 startup_command = "vim -c ':Telescope find_files'"
 startup_command_ignore_dirs = ["~/"]
@@ -39,5 +43,6 @@ path = "~/.dotfiles/alacritty"
 startup_command = "vim alacritty.toml"
 
 [[session]]
-name = "dotfiles"
-path = "~/.dotfiles"
+name = "lazygit config"
+path = "~/.dotfiles/lazygit"
+startup_command = "vim config.yml"
