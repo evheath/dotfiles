@@ -26,7 +26,7 @@ vim.api.nvim_create_autocmd('ModeChanged', {
     -- small delay needed for telescope
     vim.defer_fn(function()
       vim.cmd('colorscheme ' .. theme)
-      vim.api.nvim_echo({ { 'Switched to ' .. theme, 'WarningMsg' } }, false, {})
+      -- vim.api.nvim_echo({ { 'Switched to ' .. theme, 'WarningMsg' } }, false, {})
     end, 50)
   end,
 })
