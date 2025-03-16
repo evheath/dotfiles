@@ -22,3 +22,13 @@ dynamic_padding = true
 
 [mouse]
 hide_when_typing = true
+
+[[keyboard.bindings]]
+key = "Tab"
+mods = "Control"
+chars = "\u0002n"
+
+[[keyboard.bindings]]
+key = "Tab"
+mods = "Control|Shift"
+chars = "\u0002p"
