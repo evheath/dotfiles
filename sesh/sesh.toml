@@ -8,15 +8,16 @@
 #  Smart session manager for the terminal
 #  https://github.com/joshmedeski/sesh
 
-[default_session]
-startup_command = "vim -c ':Telescope find_files'"
-startup_command_ignore_dirs = ["~/"]
+# [default_session]
+# startup_command = "vim -c ':Telescope find_files'"
+# startup_command_ignore_dirs = ["~/"]
 
 # configs
 
 [[session]]
 name = "nvim config"
 path = "~/.dotfiles/nvim"
+startup_command = "vim -c ':Telescope find_files'"
 
 [[session]]
 name = "sesh config"

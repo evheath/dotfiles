@@ -17,6 +17,7 @@ vim.keymap.set('n', '<leader>sh', require('telescope.builtin').help_tags, { desc
 vim.keymap.set('n', '<leader>sk', require('telescope.builtin').keymaps, { desc = '[s]earch [k]eymaps' })
 
 vim.keymap.set('n', '<leader>p', require('telescope.builtin').find_files, { desc = '[p]roject files, all' })
+vim.keymap.set('n', '<M-Space>', require('telescope.builtin').find_files, { desc = '[p]roject files, all' })
 vim.keymap.set('n', '<leader>P', require('telescope.builtin').git_files, { desc = '[P]roject files, git' })
 vim.keymap.set('n', '<leader>f', function()
   require('telescope.builtin').current_buffer_fuzzy_find(require('telescope.themes').get_dropdown {

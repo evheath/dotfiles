@@ -47,7 +47,7 @@ function sesh-sessions() {
   [[ -z "$session" ]] && return
   sesh connect "$session"
 }
-bindkey "^S" sesh-sessions
+bindkey "^ " sesh-sessions
 zle     -N             sesh-sessions
 bindkey -M emacs '\es' sesh-sessions
 bindkey -M vicmd '\es' sesh-sessions
