@@ -3,6 +3,7 @@
 
 return {
   'nvim-neo-tree/neo-tree.nvim',
+  enabled = false, -- experimenting with trees outside of vim
   -- lazy = false,
   version = '*',
   dependencies = {
