@@ -14,8 +14,11 @@ normal = { family = "Hack Nerd Font", style = "Regular"}
 size = 16
 
 [window]
-startup_mode = "Fullscreen"
+startup_mode = "Maximized"
 option_as_alt = "OnlyLeft"
+decorations = "Buttonless"
+padding = { x = 8, y = 8 }
+dynamic_padding = true
 
 [mouse]
 hide_when_typing = true
