@@ -11,3 +11,19 @@ vim.api.nvim_create_autocmd('TextYankPost', {
     vim.highlight.on_yank()
   end,
 })
+-- Auto command to change colorscheme on mode change
+vim.api.nvim_create_autocmd('ModeChanged', {
+  pattern = '*',
+  callback = function()
+    local mode = vim.fn.mode()
+    local theme = 'catppuccin-macchiato' -- Default
+    if mode == 'n' then
+      theme = 'catppuccin-frappe'
+    elseif mode == 'i' or mode == 't' then
+      theme = 'catppuccin-mocha'
+    end
+
+    vim.cmd('colorscheme ' .. theme)
+    -- vim.api.nvim_echo({ { 'Switched to ' .. theme, 'WarningMsg' } }, false, {})
+  end,
+})
