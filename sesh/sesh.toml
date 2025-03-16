@@ -8,10 +8,6 @@
 #  Smart session manager for the terminal
 #  https://github.com/joshmedeski/sesh
 
-blacklist = [
-    "scratch",
-]
-
 [default_session]
 startup_command = "vim -c ':Telescope find_files'"
 startup_command_ignore_dirs = ["~/"]
@@ -24,25 +20,30 @@ path = "~/.dotfiles/nvim"
 
 [[session]]
 name = "sesh config"
-path = "~/.dotfiles/sesh"
-startup_command = "vim sesh.toml"
+path = "~/.dotfiles/"
+startup_command = "vim sesh/sesh.toml"
 
 [[session]]
 name = "tmux config"
-path = "~/.dotfiles/tmux"
-startup_command = "vim tmux.conf"
+path = "~/.dotfiles/"
+startup_command = "vim tmux/tmux.conf"
 
 [[session]]
 name = "zsh config"
-path = "~/.dotfiles/zsh"
-startup_command = "vim .zshrc"
+path = "~/.dotfiles/"
+startup_command = "vim zsh/.zshrc"
 
 [[session]]
 name = "alacritty config"
-path = "~/.dotfiles/alacritty"
-startup_command = "vim alacritty.toml"
+path = "~/.dotfiles/"
+startup_command = "vim alacritty/alacritty.toml"
 
 [[session]]
 name = "lazygit config"
-path = "~/.dotfiles/lazygit"
-startup_command = "vim config.yml"
+path = "~/.dotfiles/"
+startup_command = "vim lazygit/config.yml"
+
+[[session]]
+name = "yazi config"
+path = "~/.dotfiles/"
+startup_command = "vim yazi/yazi.toml"
