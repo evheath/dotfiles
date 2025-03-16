@@ -16,14 +16,17 @@ vim.api.nvim_create_autocmd('ModeChanged', {
   pattern = '*',
   callback = function()
     local mode = vim.fn.mode()
-    local theme = 'catppuccin-macchiato' -- Default
+    local theme = 'catppuccin-frappe'
     if mode == 'n' then
-      theme = 'catppuccin-frappe'
+      theme = 'catppuccin-macchiato'
     elseif mode == 'i' or mode == 't' then
       theme = 'catppuccin-mocha'
     end
 
-    vim.cmd('colorscheme ' .. theme)
-    -- vim.api.nvim_echo({ { 'Switched to ' .. theme, 'WarningMsg' } }, false, {})
+    -- small delay needed for telescope
+    vim.defer_fn(function()
+      vim.cmd('colorscheme ' .. theme)
+      vim.api.nvim_echo({ { 'Switched to ' .. theme, 'WarningMsg' } }, false, {})
+    end, 50)
   end,
 })
