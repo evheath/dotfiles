@@ -17,21 +17,25 @@ vim.keymap.set('n', '<leader>sh', require('telescope.builtin').help_tags, { desc
 vim.keymap.set('n', '<leader>sk', require('telescope.builtin').keymaps, { desc = '[s]earch [k]eymaps' })
 
 vim.keymap.set('n', '<leader>p', require('telescope.builtin').find_files, { desc = '[p]roject files, all' })
-vim.keymap.set('n', '<M-Space>', require('telescope.builtin').find_files, { desc = '[p]roject files, all' })
+vim.keymap.set('n', '<M-p>', require('telescope.builtin').find_files, { desc = '[p]roject files, all' })
 vim.keymap.set('n', '<leader>P', require('telescope.builtin').git_files, { desc = '[P]roject files, git' })
+vim.keymap.set('n', '<M-P>', require('telescope.builtin').git_files, { desc = '[p]roject files, all' })
 
 vim.keymap.set('n', '<leader>f', require('telescope.builtin').current_buffer_fuzzy_find, { desc = '[f]ind here' })
-vim.keymap.set('n', '<M-f>', require('telescope.builtin').current_buffer_fuzzy_find, { desc = '[f]ind here' })
+vim.keymap.set('n', '<M-f>', require('telescope.builtin').current_buffer_fuzzy_find)
 vim.keymap.set('n', '<leader>F', require('telescope.builtin').live_grep, { desc = '[F]ind in project' })
-vim.keymap.set('n', '<M-S-F>', require('telescope.builtin').live_grep, { desc = '[F]ind in project' })
+vim.keymap.set('n', '<M-S-F>', require('telescope.builtin').live_grep)
 
 vim.keymap.set('n', '<leader>/', 'gcc', { desc = 'comment', remap = true })
+vim.keymap.set('n', '<M-/>', 'gcc', { desc = 'comment', remap = true })
 vim.keymap.set('v', '<leader>/', 'gc', { desc = 'comment', remap = true })
+vim.keymap.set('v', '<M-/>', 'gc', { desc = 'comment', remap = true })
 
-vim.keymap.set('n', '<leader>gs', require('telescope.builtin').git_status, { desc = '[g]it [s]tatus' })
-vim.keymap.set('n', '<leader>ga', '<cmd> ! git add .<CR>', { desc = '[g]it stage [a]ll' })
+-- vim.keymap.set('n', '<leader>gs', require('telescope.builtin').git_status, { desc = '[g]it [s]tatus' })
+-- vim.keymap.set('n', '<leader>ga', '<cmd> ! git add .<CR>', { desc = '[g]it stage [a]ll' })
 
 vim.keymap.set('n', '<leader><leader>', require('telescope.builtin').buffers, { desc = 'buffers' })
+vim.keymap.set('n', '<M-Space>', require('telescope.builtin').buffers)
 
 vim.keymap.set('n', '<leader>tr', ':set relativenumber! <CR>', { desc = '[t]oggle [r]elative line numbers' })
 vim.keymap.set('n', '<leader>tn', ':set nu! relativenumber!<CR>', { desc = '[t]oggle line [n]umbers' })
