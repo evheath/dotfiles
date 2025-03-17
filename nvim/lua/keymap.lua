@@ -19,14 +19,11 @@ vim.keymap.set('n', '<leader>sk', require('telescope.builtin').keymaps, { desc =
 vim.keymap.set('n', '<leader>p', require('telescope.builtin').find_files, { desc = '[p]roject files, all' })
 vim.keymap.set('n', '<M-Space>', require('telescope.builtin').find_files, { desc = '[p]roject files, all' })
 vim.keymap.set('n', '<leader>P', require('telescope.builtin').git_files, { desc = '[P]roject files, git' })
-vim.keymap.set('n', '<leader>f', function()
-  require('telescope.builtin').current_buffer_fuzzy_find(require('telescope.themes').get_dropdown {
-    winblend = 10,
-    previewer = false,
-  })
-end, { desc = '[f]ind here' })
 
+vim.keymap.set('n', '<leader>f', require('telescope.builtin').current_buffer_fuzzy_find, { desc = '[f]ind here' })
+vim.keymap.set('n', '<M-f>', require('telescope.builtin').current_buffer_fuzzy_find, { desc = '[f]ind here' })
 vim.keymap.set('n', '<leader>F', require('telescope.builtin').live_grep, { desc = '[F]ind in project' })
+vim.keymap.set('n', '<M-S-F>', require('telescope.builtin').live_grep, { desc = '[F]ind in project' })
 
 vim.keymap.set('n', '<leader>/', 'gcc', { desc = 'comment', remap = true })
 vim.keymap.set('v', '<leader>/', 'gc', { desc = 'comment', remap = true })
