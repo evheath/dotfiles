@@ -3,6 +3,9 @@
 -- <C-*> ⌃ control
 -- <S-*> 󰘶 shift
 
+vim.keymap.set('n', '<M-Tab>', '<cmd>bn<CR>')
+-- vim.keymap.set('n', '<M-S-Tab>', '<cmd>bn<CR>') -- M-S-Tab does not work atm
+
 vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
 vim.keymap.set('t', '<Esc><Esc>', '<C-\\><C-n>', { desc = 'Exit terminal mode' })
 
@@ -24,7 +27,7 @@ vim.keymap.set('n', '<M-P>', require('telescope.builtin').git_files, { desc = '[
 vim.keymap.set('n', '<leader>f', require('telescope.builtin').current_buffer_fuzzy_find, { desc = '[f]ind here' })
 vim.keymap.set('n', '<M-f>', require('telescope.builtin').current_buffer_fuzzy_find)
 vim.keymap.set('n', '<leader>F', require('telescope.builtin').live_grep, { desc = '[F]ind in project' })
-vim.keymap.set('n', '<M-S-F>', require('telescope.builtin').live_grep)
+vim.keymap.set('n', '<M-S-f>', require('telescope.builtin').live_grep)
 
 vim.keymap.set('n', '<leader>/', 'gcc', { desc = 'comment', remap = true })
 vim.keymap.set('n', '<M-/>', 'gcc', { desc = 'comment', remap = true })
