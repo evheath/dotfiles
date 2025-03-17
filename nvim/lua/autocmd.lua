@@ -31,3 +31,13 @@ vim.api.nvim_create_autocmd('TextYankPost', {
 --     end, 50)
 --   end,
 -- })
+
+-- this also gets tripped up by telescope
+-- write when mode switching insert->normal
+-- vim.api.nvim_create_autocmd('ModeChanged', {
+--   pattern = 'i:n',
+--   callback = function()
+--     print 'auto write'
+--     vim.cmd 'write'
+--   end,
+-- })
