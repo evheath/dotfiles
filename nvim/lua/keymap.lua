@@ -3,6 +3,10 @@
 -- <C-*> ⌃ control
 -- <S-*> 󰘶 shift
 
+-- disable horizontal scrolling
+vim.keymap.set('', '<ScrollWheelLeft>', '<Nop>', { noremap = true, silent = true })
+vim.keymap.set('', '<ScrollWheelRight>', '<Nop>', { noremap = true, silent = true })
+
 vim.keymap.set('n', '<M-Tab>', '<cmd>bn<CR>')
 -- vim.keymap.set('n', '<M-S-Tab>', '<cmd>bn<CR>') -- M-S-Tab does not work atm
 
