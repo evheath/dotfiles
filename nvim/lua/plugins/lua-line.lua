@@ -1,16 +1,15 @@
 return {
   'nvim-lualine/lualine.nvim',
-  -- enabled = false,
   dependencies = { 'nvim-tree/nvim-web-devicons' },
   opts = {
-    -- options = { theme = 'gruvbox_light' },
+    options = { theme = 'catppuccin-mocha' },
     sections = {
       lualine_a = { 'mode' },
-      lualine_b = { 'branch', 'diff', 'diagnostics' },
-      lualine_c = { 'filename' },
-      lualine_x = { 'encoding', 'fileformat', 'filetype' },
-      lualine_y = { 'progress' },
-      lualine_z = { 'location' },
+      lualine_b = { 'buffers' },
+      lualine_c = { 'diagnostics' },
+      lualine_x = { 'filetype' },
+      lualine_y = { 'location' },
+      lualine_z = { 'mode' },
     },
   },
 }
