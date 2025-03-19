@@ -30,6 +30,7 @@ vim.keymap.set('n', '<leader>sh', require('telescope.builtin').help_tags, { desc
 vim.keymap.set('n', '<leader>sk', require('telescope.builtin').keymaps, { desc = '[s]earch [k]eymaps' })
 vim.keymap.set('n', '<leader>sp', require('telescope.builtin').find_files, { desc = '[s]earch [p]roject files, all' })
 vim.keymap.set('n', '<M-p>', require('telescope.builtin').find_files)
+vim.keymap.set('n', '<M-Space>', require('telescope.builtin').find_files)
 vim.keymap.set('n', '<leader>sP', require('telescope.builtin').git_files, { desc = '[s]earch [P]roject files, git' })
 vim.keymap.set('n', '<M-P>', require('telescope.builtin').git_files)
 vim.keymap.set('n', '<leader>sg', require('telescope.builtin').current_buffer_fuzzy_find, { desc = '[s]earch with [g]rep here' })
@@ -37,7 +38,6 @@ vim.keymap.set('n', '<M-f>', require('telescope.builtin').current_buffer_fuzzy_f
 vim.keymap.set('n', '<leader>sG', require('telescope.builtin').live_grep, { desc = '[s]earch with [G]rep in project' })
 vim.keymap.set('n', '<M-S-f>', require('telescope.builtin').live_grep)
 vim.keymap.set('n', '<leader><leader>', require('telescope.builtin').buffers, { desc = 'buffers' })
-vim.keymap.set('n', '<M-Space>', require('telescope.builtin').buffers)
 
 -- comments
 vim.keymap.set('n', '<leader>/', 'gcc', { desc = 'comment', remap = true })
