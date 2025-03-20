@@ -75,7 +75,7 @@ return {
         --  the definition of its *type*, not where it was *defined*.
         map('gy', require('telescope.builtin').lsp_type_definitions, '[g]oto t[y]pe')
 
-        map('<leader>kt', vim.lsp.buf.hover, 'pee[k] [t]ype')
+        -- map('<leader>kt', vim.lsp.buf.hover, 'pee[k] [t]ype')
 
         -- WARN: This is not Goto Definition, this is Goto Declaration.
         --  For example, in C this would take you to the header.

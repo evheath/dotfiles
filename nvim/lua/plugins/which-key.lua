@@ -15,7 +15,7 @@ return {
       { '<leader>s', group = '[s]earch help' },
       { '<leader>t', group = '[t]oggle' },
       { '<leader>g', group = '[g]it', mode = { 'n', 'v' } },
-      { '<leader>k', group = 'pee[k]', mode = { 'n', 'i' } },
+      { '<leader>p', group = '[p]eek', mode = { 'n', 'i' } },
     },
   },
 }

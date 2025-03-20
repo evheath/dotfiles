@@ -17,7 +17,8 @@ vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
 vim.keymap.set('t', '<Esc><Esc>', '<C-\\><C-n>', { desc = 'Exit terminal mode' })
 
 -- Tmux/split navigation
-vim.keymap.del('n', '<C-\\>')
+vim.keymap.set('n', '<C-\\>', '<Nop>') -- control backslash is added by tmuxnav
+vim.keymap.del('n', '<C-\\>') -- these two lines remove it
 vim.keymap.set('n', '<C-h>', '<cmd> TmuxNavigateLeft<CR>', { desc = 'Move focus to the left window' })
 vim.keymap.set('n', '<C-l>', '<cmd> TmuxNavigateRight<CR>', { desc = 'Move focus to the right window' })
 vim.keymap.set('n', '<C-j>', '<cmd> TmuxNavigateDown<CR>', { desc = 'Move focus to the lower window' })
@@ -38,13 +39,14 @@ vim.keymap.set('n', '<leader>sg', require('telescope.builtin').current_buffer_fu
 vim.keymap.set('n', '<M-f>', require('telescope.builtin').current_buffer_fuzzy_find)
 vim.keymap.set('n', '<leader>sG', require('telescope.builtin').live_grep, { desc = '[s]earch with [G]rep in project' })
 vim.keymap.set('n', '<M-S-f>', require('telescope.builtin').live_grep)
-vim.keymap.set('n', '<leader><leader>', require('telescope.builtin').buffers, { desc = 'buffers' })
 
 -- comments
-vim.keymap.set('n', '<leader>/', 'gcc', { desc = 'comment', remap = true })
 vim.keymap.set('n', '<M-/>', 'gcc', { desc = 'comment', remap = true })
-vim.keymap.set('v', '<leader>/', 'gc', { desc = 'comment', remap = true })
 vim.keymap.set('v', '<M-/>', 'gc', { desc = 'comment', remap = true })
+
+-- peak
+vim.keymap.set('n', '<leader>pt', vim.lsp.buf.hover, { desc = '[p]eek [t]ype' })
+-- TODO: create peeking functions, e.g. peek definition
 
 -- git
 -- vim.keymap.set('n', '<leader>gs', require('telescope.builtin').git_status, { desc = '[g]it [s]tatus' })
