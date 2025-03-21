@@ -56,6 +56,7 @@ vim.keymap.set('n', '<leader>pt', vim.lsp.buf.hover, { desc = '[p]eek [t]ype' })
 -- toggles
 vim.keymap.set('n', '<leader>tr', ':set relativenumber! <CR>', { desc = '[t]oggle [r]elative line numbers' })
 vim.keymap.set('n', '<leader>tn', ':set nu! relativenumber!<CR>', { desc = '[t]oggle line [n]umbers' })
+vim.keymap.set('n', '<leader>tb', require('gitsigns').toggle_current_line_blame, { desc = '[t]oggle [b]lame' })
 
 -- move selected lines
 vim.keymap.set('v', 'K', ":m '<-2<CR>gv=gv")
