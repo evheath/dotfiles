@@ -1,4 +1,4 @@
-name: hello go
+name: hello-go
 root: ~/code/hello-go/
 
 # Optional tmux socket
