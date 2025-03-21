@@ -3,9 +3,6 @@
 blacklist = [
     "scratch",
     "template",
-    "hello go",
-    "dotfiles",
-    "black and white",
 ]
 
 [default_session]
