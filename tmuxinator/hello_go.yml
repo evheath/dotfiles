@@ -10,7 +10,7 @@ root: ~/code/hello-go/
 # Project hooks
 
 # Runs on project start, always
-on_project_start: go mod tidy
+# on_project_start: command
 
 # Run on project start, the first time
 # on_project_first_start: command
@@ -43,9 +43,5 @@ on_project_start: go mod tidy
 # attach: false
 
 windows:
-  - editor:
-      layout: main-vertical
-      panes:
-        - yazi
-        - 
-  - lazygit: lg
+  - null: vim -c "Tfm"
+  - null: lg
