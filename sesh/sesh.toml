@@ -9,7 +9,7 @@ blacklist = [
 ]
 
 [default_session]
-startup_command = "vim" 
+startup_command = "vim -c 'Tfm'" # open vim with terminal file manager
 preview_command = "ls -la"
 startup_command_ignore_dirs = ["~/"]
 
