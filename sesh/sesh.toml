@@ -2,7 +2,6 @@
 
 blacklist = [
     "scratch",
-    "template",
 ]
 
 [default_session]
