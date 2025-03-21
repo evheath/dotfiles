@@ -25,9 +25,13 @@ hide_when_typing = true
 
 [keyboard]
 bindings = [
-  { key = "Tab", mods = "Control", chars = "\u0002n"},
-  { key = "Tab", mods = "Control|Shift", chars = "\u0002p"},
-  { key = "t", mods = "Control", chars = "\u0002c"},
-  { key = "w", mods = "Control", chars = "\u0002x"},
-  { key = "f", mods = "Control", chars = "\u0002z"},
+  { key = "Tab", mods = "Control", chars = "\u0002n"}, # cycle tmux window
+  { key = "Tab", mods = "Control|Shift", chars = "\u0002p"}, # cycle tmux window, backwards
+  { key = "t", mods = "Control", chars = "\u0002c"}, # new tmux window
+  { key = "w", mods = "Control", chars = "\u0002x"}, # close tmux pane/window
+  { key = "f", mods = "Control", chars = "\u0002z"}, # zoom tmux pane
+  { key = "h", mods = "Control", chars = "\u0002\u001b[D"}, # navigate to pane, left
+  { key = "j", mods = "Control", chars = "\u0002\u001b[B"}, # navigate to pane, down
+  { key = "k", mods = "Control", chars = "\u0002\u001b[A"}, # navigate to pane, up
+  { key = "l", mods = "Control", chars = "\u0002\u001b[C"}, # navigate to pane, right
 ]

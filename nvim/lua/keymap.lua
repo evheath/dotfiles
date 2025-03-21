@@ -7,23 +7,21 @@
 vim.keymap.set('', '<ScrollWheelLeft>', '<Nop>', { noremap = true, silent = true })
 vim.keymap.set('', '<ScrollWheelRight>', '<Nop>', { noremap = true, silent = true })
 
--- standalone meta commands
-vim.keymap.set('n', '<M-Tab>', '<cmd>bn<CR>') -- next buffer
--- vim.keymap.set('n', '<M-S-Tab>', '<cmd>bn<CR>') -- M-S-Tab does not work atm
-vim.keymap.set('n', '<M-w>', '<cmd>bd<CR>') -- close buffer
-vim.keymap.set({ 'n', 'i', 'v', 'x' }, '<M-e>', '<cmd>Tfm<CR>') -- open filesystem inside vim
+-- vim navigation
+vim.keymap.set('n', '<M-Tab>', '<cmd>bn<CR>', { desc = 'move to next buffer' })
+-- vim.keymap.set('n', '<M-S-Tab>', '<cmd>bn<CR>', { desc = 'move to previous buffer' }) -- M-S-Tab does not work atm
+vim.keymap.set('n', '<M-w>', '<cmd>bd<CR>', { desc = 'close buffer' })
+vim.keymap.set({ 'n', 'i', 'v', 'x' }, '<M-e>', '<cmd>Tfm<CR>', { desc = 'open terminal filesystem manager' })
+vim.keymap.set('n', '<M-h>', '<C-w>h', { desc = 'Move focus to the left window' })
+vim.keymap.set('n', '<M-l>', '<C-w>l', { desc = 'Move focus to the right window' })
+vim.keymap.set('n', '<M-j>', '<C-w>j', { desc = 'Move focus to the lower window' })
+vim.keymap.set('n', '<M-k>', '<C-w>k', { desc = 'Move focus to the upper window' })
 
 -- Escape help
 vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
 vim.keymap.set('t', '<Esc><Esc>', '<C-\\><C-n>', { desc = 'Exit terminal mode' })
 
 -- Tmux/split navigation
-vim.keymap.set('n', '<C-\\>', '<Nop>') -- control backslash is added by tmuxnav
-vim.keymap.del('n', '<C-\\>') -- these two lines remove it
-vim.keymap.set('n', '<C-h>', '<cmd> TmuxNavigateLeft<CR>', { desc = 'Move focus to the left window' })
-vim.keymap.set('n', '<C-l>', '<cmd> TmuxNavigateRight<CR>', { desc = 'Move focus to the right window' })
-vim.keymap.set('n', '<C-j>', '<cmd> TmuxNavigateDown<CR>', { desc = 'Move focus to the lower window' })
-vim.keymap.set('n', '<C-k>', '<cmd> TmuxNavigateUp<CR>', { desc = 'Move focus to the upper window' })
 
 -- diagnostic
 -- vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = '[q]uickfix' }) -- maybe enable when I understand this
