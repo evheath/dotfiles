@@ -18,5 +18,10 @@ return {
       -- ['<C-x>'] = "<C-\\><C-O>:lua require('tfm').set_next_open_mode(require('tfm').OPEN_MODE.split)<CR>",
       -- ['<C-t>'] = "<C-\\><C-O>:lua require('tfm').set_next_open_mode(require('tfm').OPEN_MODE.tabedit)<CR>",
     },
+    ui = {
+      border = 'rounded',
+      height = 0.8,
+      width = 0.8,
+    },
   },
 }
