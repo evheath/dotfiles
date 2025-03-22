@@ -21,8 +21,6 @@ vim.keymap.set('n', '<M-k>', '<C-w>k', { desc = 'Move focus to the upper window'
 vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
 vim.keymap.set('t', '<Esc><Esc>', '<C-\\><C-n>', { desc = 'Exit terminal mode' })
 
--- Tmux/split navigation
-
 -- diagnostic
 -- vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = '[q]uickfix' }) -- maybe enable when I understand this
 
