@@ -18,7 +18,7 @@ vim.keymap.set('n', '<M-j>', '<C-w>j', { desc = 'Move focus to the lower window'
 vim.keymap.set('n', '<M-k>', '<C-w>k', { desc = 'Move focus to the upper window' })
 
 -- Escape help
-vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
+vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR><cmd>fclose<CR>')
 vim.keymap.set('t', '<Esc><Esc>', '<C-\\><C-n>', { desc = 'Exit terminal mode' })
 
 -- diagnostic
