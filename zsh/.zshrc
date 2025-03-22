@@ -1,6 +1,6 @@
 # zsh
 export ZSH="/Users/elliot/.oh-my-zsh"
-ZSH_THEME="robbyrussell"
+# ZSH_THEME="robbyrussell"
 plugins=(git)
 source $ZSH/oh-my-zsh.sh
 
@@ -63,6 +63,9 @@ function y() {
 	fi
 	rm -f -- "$tmp"
 }
+
+# starship https://starship.rs/
+eval "$(starship init zsh)"
 
 # https://github.com/ajeetdsouza/zoxide
 # zoxide (keep at bottom)

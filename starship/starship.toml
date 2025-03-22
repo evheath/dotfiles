@@ -1,0 +1,27 @@
+# https://starship.rs/config/
+# Get editor completions based on the config schema
+"$schema" = 'https://starship.rs/config-schema.json'
+
+[character] # The name of the module we are configuring is 'character'
+success_symbol = '[➜](bold green)' # The 'success_symbol' segment is being set to '➜' with the color 'bold green'
+
+[package]
+disabled = true
+
+[gcloud]
+disabled = true
+
+[golang]
+disabled = true
+
+[nodejs]
+disabled = true
+
+[git_branch]
+format = '[$symbol$branch(:$remote_branch)]($style) '
+
+[battery]
+disabled = true
+
+[lua]
+disabled = true
