@@ -57,6 +57,7 @@ vim.keymap.set('v', '<M-/>', 'gc', { desc = 'comment', remap = true })
 vim.keymap.set('n', '<leader>tr', ':set relativenumber! <CR>', { desc = '[t]oggle [r]elative line numbers' })
 vim.keymap.set('n', '<leader>tn', ':set nu! relativenumber!<CR>', { desc = '[t]oggle line [n]umbers' })
 vim.keymap.set('n', '<leader>tb', '<cmd>Gitsigns toggle_current_line_blame<CR>', { desc = '[t]oggle [b]lame' })
+vim.keymap.set('n', '<leader>tt', '<cmd>Floaterminal<CR>', { desc = '[t]oggle floating [t]erminal' })
 
 -- move selected lines
 vim.keymap.set('v', 'K', ":m '<-2<CR>gv=gv")
