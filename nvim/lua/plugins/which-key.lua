@@ -12,9 +12,9 @@ return {
     -- Document existing key chains
     spec = {
       { '<leader>c', group = '[c]ode', mode = { 'n', 'x' } },
-      { '<leader>s', group = '[s]earch help' },
+      { '<leader>s', group = '[s]earch' },
       { '<leader>t', group = '[t]oggle' },
-      { '<leader>g', group = '[g]it', mode = { 'n', 'v' } },
+      -- { '<leader>g', group = '[g]it', mode = { 'n', 'v' } }, -- enable when I have a Gitsigns workflow
       { '<leader>p', group = '[p]eek', mode = { 'n', 'i' } },
     },
   },

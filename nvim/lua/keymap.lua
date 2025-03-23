@@ -7,15 +7,17 @@
 vim.keymap.set('', '<ScrollWheelLeft>', '<Nop>', { noremap = true, silent = true })
 vim.keymap.set('', '<ScrollWheelRight>', '<Nop>', { noremap = true, silent = true })
 
--- vim navigation
+-- navigation
 vim.keymap.set('n', '<M-Tab>', '<cmd>bn<CR>', { desc = 'move to next buffer' })
 -- vim.keymap.set('n', '<M-S-Tab>', '<cmd>bn<CR>', { desc = 'move to previous buffer' }) -- M-S-Tab does not work atm
 vim.keymap.set('n', '<M-w>', '<cmd>bd<CR>', { desc = 'close buffer' })
-vim.keymap.set({ 'n', 'i', 'v', 'x' }, '<M-e>', '<cmd>Tfm<CR>', { desc = 'open terminal filesystem manager' })
+vim.keymap.set('n', '<M-W>', '<cmd>bd!<CR>', { desc = 'force close buffer' })
+-- vim.keymap.set({ 'n', 'i', 'v', 'x' }, '<M-e>', '<cmd>Tfm<CR>', { desc = 'open terminal filesystem manager' })
 vim.keymap.set('n', '<M-h>', '<C-w>h', { desc = 'Move focus to the left window' })
 vim.keymap.set('n', '<M-l>', '<C-w>l', { desc = 'Move focus to the right window' })
 vim.keymap.set('n', '<M-j>', '<C-w>j', { desc = 'Move focus to the lower window' })
 vim.keymap.set('n', '<M-k>', '<C-w>k', { desc = 'Move focus to the upper window' })
+vim.keymap.set('n', '-', '<cmd>Oil<CR>', { desc = 'Open oil filesystem' })
 
 -- Escape help
 vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR><cmd>fclose<CR>')
