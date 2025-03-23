@@ -39,13 +39,15 @@ vim.keymap.set('n', '<M-f>', require('telescope.builtin').current_buffer_fuzzy_f
 vim.keymap.set('n', '<leader>sG', require('telescope.builtin').live_grep, { desc = '[s]earch with [G]rep in project' })
 vim.keymap.set('n', '<M-S-f>', require('telescope.builtin').live_grep)
 
+-- LSP
+vim.keymap.set('n', '<leader>cf', require('telescope.builtin').lsp_references, { desc = '[c]ode [f]ind references' })
+vim.keymap.set('n', '<leader>cr', vim.lsp.buf.rename, { desc = '[c]ode [r]ename symbol' })
+vim.keymap.set('n', '<leader>ca', vim.lsp.buf.code_action, { desc = '[c]ode [a]ction' })
+vim.keymap.set('n', '<leader>ct', vim.lsp.buf.hover, { desc = '[c]ode peek [t]ype' })
+
 -- comments
 vim.keymap.set('n', '<M-/>', 'gcc', { desc = 'comment', remap = true })
 vim.keymap.set('v', '<M-/>', 'gc', { desc = 'comment', remap = true })
-
--- peak
-vim.keymap.set('n', '<leader>pt', vim.lsp.buf.hover, { desc = '[p]eek [t]ype' })
--- TODO: create peeking functions, e.g. peek definition
 
 -- git
 -- vim.keymap.set('n', '<leader>gs', require('telescope.builtin').git_status, { desc = '[g]it [s]tatus' })
