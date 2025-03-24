@@ -43,5 +43,5 @@ root: ~/code/hello-go/
 # attach: false
 
 windows:
-  - null: vim -c "Tfm"
-  - null: lg
+  - editor: vim
+  - git: lg

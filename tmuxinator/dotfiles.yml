@@ -43,5 +43,5 @@ root: ~/code/dotfiles/
 # attach: false
 
 windows:
-  - null: vim -c ":Telescope find_files"
-  - null: lg
+  - editor: vim -c ":Telescope find_files"
+  - git: lg
