@@ -17,6 +17,7 @@ vim.keymap.set('n', '<M-h>', '<C-w>h', { desc = 'Move focus to the left window' 
 vim.keymap.set('n', '<M-l>', '<C-w>l', { desc = 'Move focus to the right window' })
 vim.keymap.set('n', '<M-j>', '<C-w>j', { desc = 'Move focus to the lower window' })
 vim.keymap.set('n', '<M-k>', '<C-w>k', { desc = 'Move focus to the upper window' })
+vim.keymap.set('n', '<M-3>', '<cmd>b#<CR>', { desc = 'Previous buffer' })
 vim.keymap.set('n', '-', '<cmd>Oil<CR>', { desc = 'Open oil filesystem' })
 
 -- Escape help
