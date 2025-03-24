@@ -26,6 +26,8 @@ vim.keymap.set('n', '<M-k>', '<C-w>k', { desc = 'Move focus to the upper window'
 vim.keymap.set('n', '<M-3>', '<cmd>b#<CR>', { desc = 'Previous buffer' })
 vim.keymap.set('n', '-', '<cmd>Oil<CR>', { desc = 'Open oil filesystem' })
 vim.keymap.set({ 'n', 't' }, '\\', '<cmd>Floaterminal<CR>', { desc = 'Open Floating Terminal' })
+vim.keymap.set('n', '<M-d>', '<C-d>zz', { desc = 'Page down' })
+vim.keymap.set('n', '<M-u>', '<C-u>zz', { desc = 'Page up' })
 
 -- Escape help
 vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR><cmd>fclose<CR>')
@@ -60,6 +62,10 @@ vim.keymap.set('v', '<M-/>', 'gc', { desc = 'comment', remap = true })
 -- git
 -- vim.keymap.set('n', '<leader>gs', '<cmd>Telescope git_status', { desc = '[g]it [s]tatus' })
 -- vim.keymap.set('n', '<leader>ga', '<cmd> ! git add .<CR>', { desc = '[g]it stage [a]ll' })
+
+-- void
+vim.keymap.set('x', '<leader>p', [["_dP]], { desc = 'void paste' })
+vim.keymap.set({ 'n', 'v' }, '<leader>d', [["_d]], { desc = 'void delete' })
 
 -- toggles
 vim.keymap.set('n', '<leader>tr', ':set relativenumber! <CR>', { desc = '[t]oggle [r]elative line numbers' })
