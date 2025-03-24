@@ -10,7 +10,13 @@ vim.keymap.set('', '<ScrollWheelRight>', '<Nop>', { noremap = true, silent = tru
 -- navigation
 vim.keymap.set('n', '<M-Tab>', '<cmd>bn<CR>', { desc = 'move to next buffer' })
 -- vim.keymap.set('n', '<M-S-Tab>', '<cmd>bn<CR>', { desc = 'move to previous buffer' }) -- M-S-Tab does not work atm
-vim.keymap.set('n', '<M-w>', '<cmd>bd<CR>', { desc = 'close buffer' })
+vim.keymap.set('n', '<M-w>', function()
+  if #vim.api.nvim_list_wins() > 1 then
+    vim.cmd 'close'
+  else
+    vim.cmd 'bdelete'
+  end
+end, { desc = 'close window or delete buffer' })
 vim.keymap.set('n', '<M-W>', '<cmd>bd!<CR>', { desc = 'force close buffer' })
 -- vim.keymap.set({ 'n', 'i', 'v', 'x' }, '<M-e>', '<cmd>Tfm<CR>', { desc = 'open terminal filesystem manager' })
 vim.keymap.set('n', '<M-h>', '<C-w>h', { desc = 'Move focus to the left window' })
