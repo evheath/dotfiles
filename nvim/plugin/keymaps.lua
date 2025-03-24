@@ -19,6 +19,7 @@ vim.keymap.set('n', '<M-j>', '<C-w>j', { desc = 'Move focus to the lower window'
 vim.keymap.set('n', '<M-k>', '<C-w>k', { desc = 'Move focus to the upper window' })
 vim.keymap.set('n', '<M-3>', '<cmd>b#<CR>', { desc = 'Previous buffer' })
 vim.keymap.set('n', '-', '<cmd>Oil<CR>', { desc = 'Open oil filesystem' })
+vim.keymap.set({ 'n', 't' }, '\\', '<cmd>Floaterminal<CR>', { desc = 'Open Floating Terminal' })
 
 -- Escape help
 vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR><cmd>fclose<CR>')
