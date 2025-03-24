@@ -50,6 +50,7 @@ local toggle_terminal = function()
     vim.cmd 'startinsert' -- Start insert mode when terminal opens
   else
     vim.api.nvim_win_hide(state.floating.win)
+    vim.bo[state.floating.buf].buflisted = false -- do not list buffer with others
   end
 end
 
