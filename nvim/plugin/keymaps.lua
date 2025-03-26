@@ -29,9 +29,16 @@ vim.keymap.set({ 'n', 't' }, '\\', '<cmd>Floaterminal<CR>', { desc = 'Open Float
 vim.keymap.set('n', '<M-d>', '<C-d>zz', { desc = 'Page down' })
 vim.keymap.set('n', '<M-u>', '<C-u>zz', { desc = 'Page up' })
 
--- Escape help
-vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR><cmd>fclose<CR>')
-vim.keymap.set('t', '<Esc>', '<C-\\><C-n>', { desc = 'Exit terminal mode' })
+-- Escape
+vim.keymap.set('n', '<Esc>', function()
+  vim.cmd 'nohlsearch' -- clear any searches
+  vim.cmd 'fclose' -- close any floating window
+  if vim.wo.diff then
+    vim.cmd 'diffoff' -- toggle diff off
+    vim.cmd 'only' -- toggle diff off
+  end
+end)
+vim.keymap.set('t', '<Esc>', '<C-\\><C-n>', { desc = 'terminal to normal mode' })
 
 -- diagnostic
 -- vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = '[q]uickfix' }) -- maybe enable when I understand this

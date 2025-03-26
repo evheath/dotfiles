@@ -23,6 +23,7 @@ local function create_floating_window(opts)
   else
     buf = vim.api.nvim_create_buf(false, true) -- No file, scratch buffer
   end
+  vim.bo[buf].buflisted = false
 
   -- Define window configuration
   local win_config = {

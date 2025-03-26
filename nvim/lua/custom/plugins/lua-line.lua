@@ -4,10 +4,11 @@ return {
   opts = {
     options = { theme = 'catppuccin-mocha' },
     sections = {
+      -- https://github.com/nvim-lualine/lualine.nvim/blob/master/README.md#available-components
       lualine_a = { 'mode' },
       lualine_b = { 'buffers' },
-      lualine_c = { 'diagnostics' },
-      lualine_x = { 'filetype' },
+      lualine_c = {},
+      lualine_x = { 'diff', 'diagnostics' },
       lualine_y = { 'location' },
       lualine_z = { 'mode' },
     },
