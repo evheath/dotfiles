@@ -38,7 +38,7 @@ vim.keymap.set('n', '<Esc>', function()
     vim.cmd 'only' -- toggle diff off
   end
 end)
-vim.keymap.set('t', '<Esc>', '<C-\\><C-n>', { desc = 'terminal to normal mode' })
+vim.keymap.set('t', '<Esc><Esc>', '<C-\\><C-n>', { desc = 'terminal to normal mode' })
 
 -- diagnostic
 -- vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = '[q]uickfix' }) -- maybe enable when I understand this

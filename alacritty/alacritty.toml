@@ -28,7 +28,7 @@ bindings = [
   { key = "Tab", mods = "Control", chars = "\u0002n"}, # cycle tmux window
   { key = "Tab", mods = "Control|Shift", chars = "\u0002p"}, # cycle tmux window, backwards
   { key = "t", mods = "Control", chars = "\u0002c"}, # new tmux window
-  { key = "w", mods = "Control", chars = "\u0002&"}, # close tmux pane/window
+  { key = "w", mods = "Control", chars = "\u0002x"}, # close tmux pane/window
   { key = "f", mods = "Control", chars = "\u0002z"}, # zoom tmux pane
   { key = "h", mods = "Control", chars = "\u0002\u001b[D"}, # navigate to pane, left
   { key = "j", mods = "Control", chars = "\u0002\u001b[B"}, # navigate to pane, down
