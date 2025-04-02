@@ -9,7 +9,7 @@ vim.keymap.set('', '<ScrollWheelRight>', '<Nop>', { noremap = true, silent = tru
 
 -- navigation
 vim.keymap.set('n', '<M-Tab>', '<cmd>bn<CR>', { desc = 'move to next buffer' })
--- vim.keymap.set('n', '<M-S-Tab>', '<cmd>bn<CR>', { desc = 'move to previous buffer' }) -- M-S-Tab does not work atm
+vim.keymap.set('n', '<S-Tab>', '<cmd>bp<CR>', { desc = 'move to previous buffer' }) -- M-S-Tab actually sends S-Tab
 vim.keymap.set('n', '<M-w>', function()
   if #vim.api.nvim_list_wins() > 1 then
     vim.cmd 'close'
@@ -18,7 +18,6 @@ vim.keymap.set('n', '<M-w>', function()
   end
 end, { desc = 'close window or delete buffer' })
 vim.keymap.set('n', '<M-W>', '<cmd>bd!<CR>', { desc = 'force close buffer' })
--- vim.keymap.set({ 'n', 'i', 'v', 'x' }, '<M-e>', '<cmd>Tfm<CR>', { desc = 'open terminal filesystem manager' })
 vim.keymap.set('n', '<M-h>', '<C-w>h', { desc = 'Move focus to the left window' })
 vim.keymap.set('n', '<M-l>', '<C-w>l', { desc = 'Move focus to the right window' })
 vim.keymap.set('n', '<M-j>', '<C-w>j', { desc = 'Move focus to the lower window' })
@@ -40,8 +39,11 @@ vim.keymap.set('n', '<Esc>', function()
 end)
 vim.keymap.set('t', '<Esc><Esc>', '<C-\\><C-n>', { desc = 'terminal to normal mode' })
 
+-- terminal
+vim.keymap.set('t', '<M-l>', '<C-l>', { desc = 'clear terminal' })
+
 -- diagnostic
--- vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = '[q]uickfix' }) -- maybe enable when I understand this
+vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = '[q]uickfix' }) -- maybe enable when I understand this
 
 -- telescope
 vim.keymap.set('n', '<leader>sh', '<cmd>Telescope help_tags<CR>', { desc = '[s]earch vim [h]elp' })
@@ -65,10 +67,6 @@ vim.keymap.set('n', '<leader>ct', vim.lsp.buf.hover, { desc = '[c]ode peek [t]yp
 -- comments
 vim.keymap.set('n', '<M-/>', 'gcc', { desc = 'comment', remap = true })
 vim.keymap.set('v', '<M-/>', 'gc', { desc = 'comment', remap = true })
-
--- git
--- vim.keymap.set('n', '<leader>gs', '<cmd>Telescope git_status', { desc = '[g]it [s]tatus' })
--- vim.keymap.set('n', '<leader>ga', '<cmd> ! git add .<CR>', { desc = '[g]it stage [a]ll' })
 
 -- void
 vim.keymap.set('x', '<leader>p', [["_dP]], { desc = 'void paste' })
