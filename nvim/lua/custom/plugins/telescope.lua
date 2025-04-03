@@ -1,3 +1,4 @@
+-- https://github.com/nvim-telescope/telescope.nvim
 return { -- Fuzzy Finder (files, lsp, etc)
   'nvim-telescope/telescope.nvim',
   lazy = false,
@@ -24,35 +25,16 @@ return { -- Fuzzy Finder (files, lsp, etc)
     { 'nvim-tree/nvim-web-devicons' },
   },
   config = function()
-    -- Telescope is a fuzzy finder that comes with a lot of different things that
-    -- it can fuzzy find! It's more than just a "file finder", it can search
-    -- many different aspects of Neovim, your workspace, LSP, and more!
-    --
-    -- The easiest way to use Telescope, is to start by doing something like:
-    --  :Telescope help_tags
-    --
-    -- After running this command, a window will open up and you're able to
-    -- type in the prompt window. You'll see a list of `help_tags` options and
-    -- a corresponding preview of the help.
-    --
-    -- Two important keymaps to use while in Telescope are:
-    --  - Insert mode: <c-/>
-    --  - Normal mode: ?
-    --
-    -- This opens a window that shows you all of the keymaps for the current
-    -- Telescope picker. This is really useful to discover what Telescope can
-    -- do as well as how to actually do it!
-
-    -- [[ Configure Telescope ]]
-    -- See `:help telescope` and `:help telescope.setup()`
     require('telescope').setup {
-      -- You can put your default mappings / updates / etc. in here
-      --  All the info you're looking for is in `:help telescope.setup()`
-      --
       defaults = {
+        preview = {
+          filesize_limit = 0.1, -- MB
+        },
         file_ignore_patterns = {
           '^node_modules/',
           '^.git/',
+          '^.obsidian/',
+          '^.DS_Store',
         },
         mappings = {
           i = { ['<esc>'] = require('telescope.actions').close },
@@ -69,6 +51,15 @@ return { -- Fuzzy Finder (files, lsp, etc)
         },
       },
     }
+
+    -- telescope keymaps
+    local builtin = require 'telescope.builtin'
+    vim.keymap.set('n', '<leader>sn', function()
+      builtin.find_files { cwd = '~/notes/' }
+    end, { desc = '[s]earch [n]otes' })
+    vim.keymap.set('n', '<leader>sd', function()
+      builtin.find_files { cwd = '~/code/dotfiles/' }
+    end, { desc = '[s]earch [d]otfiles' })
 
     -- Enable Telescope extensions if they are installed
     pcall(require('telescope').load_extension, 'fzf')
