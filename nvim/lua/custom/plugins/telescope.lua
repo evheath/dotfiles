@@ -54,12 +54,23 @@ return { -- Fuzzy Finder (files, lsp, etc)
 
     -- telescope keymaps
     local builtin = require 'telescope.builtin'
+
     vim.keymap.set('n', '<leader>sn', function()
-      builtin.find_files { cwd = '~/notes/' }
+      builtin.live_grep { cwd = '~/notes/' }
     end, { desc = '[s]earch [n]otes' })
     vim.keymap.set('n', '<leader>sd', function()
       builtin.find_files { cwd = '~/code/dotfiles/' }
     end, { desc = '[s]earch [d]otfiles' })
+    vim.keymap.set('n', '<leader>sh', builtin.help_tags, { desc = '[s]earch vim [h]elp' })
+    vim.keymap.set('n', '<leader>sk', builtin.keymaps, { desc = '[s]earch [k]eymaps' })
+
+    vim.keymap.set('n', '<M-p>', builtin.find_files)
+    vim.keymap.set('n', '<M-Space>', builtin.find_files)
+    vim.keymap.set('n', '<M-P>', builtin.git_files)
+    vim.keymap.set('n', '<M-f>', builtin.current_buffer_fuzzy_find)
+    vim.keymap.set('n', '<M-S-f>', builtin.live_grep)
+
+    vim.keymap.set('n', '<leader>cf', builtin.lsp_references, { desc = '[c]ode [f]ind references' })
 
     -- Enable Telescope extensions if they are installed
     pcall(require('telescope').load_extension, 'fzf')

@@ -45,21 +45,7 @@ vim.keymap.set('t', '<M-l>', '<C-l>', { desc = 'clear terminal' })
 -- diagnostic
 vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = '[q]uickfix' }) -- maybe enable when I understand this
 
--- telescope
-vim.keymap.set('n', '<leader>sh', '<cmd>Telescope help_tags<CR>', { desc = '[s]earch vim [h]elp' })
-vim.keymap.set('n', '<leader>sk', '<cmd>Telescope keymaps<CR>', { desc = '[s]earch [k]eymaps' })
-vim.keymap.set('n', '<leader>sp', '<cmd>Telescope find_files<CR>', { desc = '[s]earch [p]roject files, all' })
-vim.keymap.set('n', '<M-p>', '<cmd>Telescope find_files<CR>')
-vim.keymap.set('n', '<M-Space>', '<cmd>Telescope find_files<CR>')
-vim.keymap.set('n', '<leader>sP', '<cmd>Telescope git_files<CR>', { desc = '[s]earch [P]roject files, git' })
-vim.keymap.set('n', '<M-P>', '<cmd>Telescope git_files<CR>')
-vim.keymap.set('n', '<leader>sg', '<cmd>Telescope current_buffer_fuzzy_find<CR>', { desc = '[s]earch with [g]rep here' })
-vim.keymap.set('n', '<M-f>', '<cmd>Telescope current_buffer_fuzzy_find<CR>')
-vim.keymap.set('n', '<leader>sG', '<cmd>Telescope live_grep<CR>', { desc = '[s]earch with [G]rep in project' })
-vim.keymap.set('n', '<M-S-f>', '<cmd>Telescope live_grep<CR>')
-
 -- LSP
-vim.keymap.set('n', '<leader>cf', '<cmd>Telescope lsp_references<CR>', { desc = '[c]ode [f]ind references' })
 vim.keymap.set('n', '<leader>cr', vim.lsp.buf.rename, { desc = '[c]ode [r]ename symbol' })
 vim.keymap.set('n', '<leader>ca', vim.lsp.buf.code_action, { desc = '[c]ode [a]ction' })
 vim.keymap.set('n', '<leader>ct', vim.lsp.buf.hover, { desc = '[c]ode peek [t]ype' })
