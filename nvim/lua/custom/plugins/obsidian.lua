@@ -10,6 +10,7 @@ return {
   opts = {
     ui = { enable = false },
     dir = '~/notes/',
+    notes_subdir = 'fleeting',
     mappings = {
       ['<leader>of'] = {
         action = function()
