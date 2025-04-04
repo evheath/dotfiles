@@ -55,7 +55,8 @@ vim.keymap.set('n', '<M-/>', 'gcc', { desc = 'comment', remap = true })
 vim.keymap.set('v', '<M-/>', 'gc', { desc = 'comment', remap = true })
 
 -- void
-vim.keymap.set('x', '<leader>p', [["_dP]], { desc = 'void paste' })
+vim.keymap.set('x', '<leader>p', [["_dp]], { desc = 'void paste' })
+vim.keymap.set('x', '<leader>P', [["_dP]], { desc = 'void Paste' })
 vim.keymap.set({ 'n', 'v' }, '<leader>d', [["_d]], { desc = 'void delete' })
 
 -- toggles
@@ -71,3 +72,4 @@ vim.keymap.set('v', 'J', ":m '>+1<CR>gv=gv")
 -- obsidian commands safe to use outside obsidian
 vim.keymap.set('n', '<leader>os', '<cmd>ObsidianSearch<CR>', { desc = '[o]bsidian [s]earch' })
 vim.keymap.set('n', '<leader>on', '<cmd>ObsidianNew<CR>', { desc = '[o]bsidian [n]ew' })
+vim.keymap.set('n', '<leader>ot', '<cmd>ObsidianToday<CR>', { desc = '[o]bsidian [t]oday' })

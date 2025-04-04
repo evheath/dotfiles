@@ -75,6 +75,3 @@ vim.opt.wrap = false
 -- no swaps
 vim.opt.swapfile = false
 vim.opt.backup = false
-
--- needed for obsidian
-vim.opt.conceallevel = 1

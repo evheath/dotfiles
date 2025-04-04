@@ -1,12 +1,14 @@
+local date_format = '%Y%m%d-%a'
 -- https://github.com/epwalsh/obsidian.nvim
 return {
   'epwalsh/obsidian.nvim',
   version = '*', -- use latest release instead of latest commit
-  lazy = false, -- allow use of obsidian commands
+  lazy = false, -- allow use of obsidian commands anywhere
   dependencies = {
     'nvim-lua/plenary.nvim',
   },
   opts = {
+    ui = { enable = false },
     dir = '~/notes/',
     mappings = {
       ['<leader>of'] = {
@@ -16,7 +18,6 @@ return {
         opts = { noremap = false, expr = true, buffer = true, desc = '[o]bsidian [f]ollow link' },
       },
     },
-    -- Optional, customize how note IDs are generated given an optional title.
     ---@param title string|?
     ---@return string
     note_id_func = function(title)
@@ -33,7 +34,31 @@ return {
           suffix = suffix .. string.char(math.random(65, 90))
         end
       end
-      return os.date '%Y%m%d-%a' .. '-' .. suffix
+      return os.date(date_format) .. '-' .. suffix
     end,
+    ---@return table
+    note_frontmatter_func = function(note)
+      -- Add the title of the note as an alias.
+      if note.title then
+        note:add_alias(note.title)
+      end
+
+      local out = { aliases = note.aliases, tags = note.tags }
+      if note.metadata ~= nil and not vim.tbl_isempty(note.metadata) then
+        for k, v in pairs(note.metadata) do
+          out[k] = v
+        end
+      end
+
+      return out
+    end,
+    templates = {
+      folder = 'templates',
+    },
+    daily_notes = {
+      folder = 'fleeting',
+      date_format = date_format,
+      template = 'daily',
+    },
   },
 }
