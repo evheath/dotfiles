@@ -41,3 +41,11 @@ vim.api.nvim_create_autocmd('TextYankPost', {
 --     vim.cmd 'write'
 --   end,
 -- })
+
+-- turn on spell checking for certain filetypes
+vim.api.nvim_create_autocmd('FileType', {
+  pattern = { 'markdown', 'text', 'gitcommit' },
+  callback = function()
+    vim.opt_local.spell = true
+  end,
+})

@@ -64,6 +64,10 @@ vim.keymap.set('n', '<leader>tr', ':set relativenumber! <CR>', { desc = '[t]oggl
 vim.keymap.set('n', '<leader>tn', ':set nu! relativenumber!<CR>', { desc = '[t]oggle line [n]umbers' })
 vim.keymap.set('n', '<leader>tb', '<cmd>Gitsigns toggle_current_line_blame<CR>', { desc = '[t]oggle [b]lame' })
 vim.keymap.set('n', '<leader>tt', '<cmd>Floaterminal<CR>', { desc = '[t]oggle floating [t]erminal' })
+vim.keymap.set('n', '<leader>ts', function()
+  vim.wo.spell = not vim.wo.spell
+  print('Spell check ' .. (vim.wo.spell and 'enabled' or 'disabled'))
+end, { desc = '[t]oggle [s]pellcheck' })
 
 -- move selected lines
 vim.keymap.set('v', 'K', ":m '<-2<CR>gv=gv")
@@ -73,3 +77,4 @@ vim.keymap.set('v', 'J', ":m '>+1<CR>gv=gv")
 vim.keymap.set('n', '<leader>os', '<cmd>ObsidianSearch<CR>', { desc = '[o]bsidian [s]earch' })
 vim.keymap.set('n', '<leader>on', '<cmd>ObsidianNew<CR>', { desc = '[o]bsidian [n]ew' })
 vim.keymap.set('n', '<leader>ot', '<cmd>ObsidianToday<CR>', { desc = '[o]bsidian [t]oday' })
+vim.keymap.set('n', '<leader>or', '<cmd>ObsidianRename<CR>', { desc = '[o]bsidian [r]ename' })

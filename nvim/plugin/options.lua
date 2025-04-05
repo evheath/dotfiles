@@ -75,3 +75,7 @@ vim.opt.wrap = false
 -- no swaps
 vim.opt.swapfile = false
 vim.opt.backup = false
+
+-- spelling
+vim.opt.spelllang = { 'en_us' }
+vim.opt.spellcapcheck = '' -- disable capitalization checks
