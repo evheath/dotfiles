@@ -9,7 +9,12 @@ return {
   },
   opts = {
     ui = { enable = false },
-    dir = '~/notes/',
+    workspaces = {
+      {
+        name = 'notes',
+        path = '~/notes',
+      },
+    },
     notes_subdir = 'fleeting',
     mappings = {
       ['<leader>of'] = {
@@ -19,6 +24,7 @@ return {
         opts = { noremap = false, expr = true, buffer = true, desc = '[o]bsidian [f]ollow link' },
       },
     },
+    new_notes_location = 'notes_subdir',
     ---@param title string|?
     ---@return string
     note_id_func = function(title)
