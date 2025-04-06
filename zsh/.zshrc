@@ -4,16 +4,19 @@ export ZSH="/Users/elliot/.oh-my-zsh"
 plugins=(git)
 source $ZSH/oh-my-zsh.sh
 
+# PATH
+export PATH="$PNPM_HOME:$PATH"
+export PATH=/Users/elliot/flutter/bin:$PATH
+export PATH=/Users/elliot/Library/Android/sdk/platform-tools:$PATH
+export PATH=~/.npm-global/bin:$PATH
+export PATH="$PATH:$(go env GOPATH)/bin"
+
 # Google cloud
 if [ -f '/Users/elliot/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/elliot/google-cloud-sdk/path.zsh.inc'; fi
 if [ -f '/Users/elliot/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/elliot/google-cloud-sdk/completion.zsh.inc'; fi
 
-# misc exports
-export PATH=/Users/elliot/flutter/bin:$PATH
-export PATH=/Users/elliot/Library/Android/sdk/platform-tools:$PATH
-export PATH=~/.npm-global/bin:$PATH
+# non-PATH exports
 export PNPM_HOME="/Users/elliot/Library/pnpm"
-export PATH="$PNPM_HOME:$PATH"
 # export EDITOR="/Applications/Visual\ Studio\ Code.app/Contents/MacOS/Electron"
 export EDITOR=nvim
 export XDG_CONFIG_HOME="$HOME/.config"
