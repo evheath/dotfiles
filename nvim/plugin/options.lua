@@ -79,3 +79,9 @@ vim.opt.backup = false
 -- spelling
 vim.opt.spelllang = { 'en_us' }
 vim.opt.spellcapcheck = '' -- disable capitalization checks
+
+-- folding
+vim.wo.foldmethod = 'expr'
+vim.wo.foldexpr = 'v:lua.vim.treesitter.foldexpr()'
+vim.wo.foldlevel = 99 -- Don't auto-close folds
+vim.wo.foldenable = true -- Allow folding, but don't close anything by default
