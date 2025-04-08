@@ -15,7 +15,7 @@ return {
         path = '~/notes',
       },
     },
-    notes_subdir = 'fleeting',
+    notes_subdir = 'permanent',
     mappings = {
       ['<leader>of'] = {
         action = function()
@@ -28,9 +28,6 @@ return {
     ---@param title string|?
     ---@return string
     note_id_func = function(title)
-      -- Create note IDs in a Zettelkasten format with a timestamp and a suffix.
-      -- In this case a note with the title 'My new note' will be given an ID that looks
-      -- like '1657296016-my-new-note', and therefore the file name '1657296016-my-new-note.md'
       local suffix = ''
       if title ~= nil then
         -- If title is given, transform it into valid file name.
@@ -40,8 +37,9 @@ return {
         for _ = 1, 4 do
           suffix = suffix .. string.char(math.random(65, 90))
         end
+        return os.date(date_format) .. '-' .. suffix
       end
-      return os.date(date_format) .. '-' .. suffix
+      return suffix
     end,
     ---@return table
     note_frontmatter_func = function(note)
@@ -50,7 +48,7 @@ return {
         note:add_alias(note.title)
       end
 
-      local out = { aliases = note.aliases, tags = note.tags }
+      local out = { id = note.id, aliases = note.aliases, tags = note.tags }
       if note.metadata ~= nil and not vim.tbl_isempty(note.metadata) then
         for k, v in pairs(note.metadata) do
           out[k] = v
