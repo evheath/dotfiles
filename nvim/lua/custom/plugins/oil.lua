@@ -1,3 +1,4 @@
+-- https://github.com/stevearc/oil.nvim?tab=readme-ov-file#options
 return {
   'stevearc/oil.nvim',
   ---@module 'oil'
