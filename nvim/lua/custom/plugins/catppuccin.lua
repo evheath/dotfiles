@@ -1,3 +1,4 @@
+-- https://github.com/catppuccin/nvim
 return {
   'catppuccin/nvim',
   lazy = false,
@@ -16,6 +17,7 @@ return {
         },
         which_key = true,
       },
+      transparent_background = true,
     }
     vim.cmd 'colorscheme catppuccin-mocha'
   end,
