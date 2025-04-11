@@ -25,9 +25,7 @@ hide_when_typing = true
 
 [keyboard]
 bindings = [
-  { key = "Space", mods = "Command", chars = "\u001b[99~"}, # cycle tmux window
-  { key = "Tab", mods = "Control", chars = "\u0002n"}, # cycle tmux window
-  { key = "Tab", mods = "Control|Shift", chars = "\u0002p"}, # cycle tmux window, backwards
+  { key = "Space", mods = "Command", chars = "\u001b[99~"}, # escape sequence to launch sesh
   { key = "t", mods = "Command", chars = "\u0002c"}, # new tmux window
   { key = "w", mods = "Command", chars = "\u0002x"}, # close tmux pane/window
   { key = "1", mods = "Command", chars = "\u00021"}, # go to tmux window 1

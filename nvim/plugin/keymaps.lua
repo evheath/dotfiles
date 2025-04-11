@@ -28,6 +28,8 @@ vim.keymap.set('n', '_', '<cmd>Oil .<CR>', { desc = 'Open oil, project' })
 vim.keymap.set({ 'n', 't' }, '\\', '<cmd>Floaterminal<CR>', { desc = 'Open Floating Terminal' })
 vim.keymap.set('n', '<M-d>', '<C-d>zz', { desc = 'Page down' })
 vim.keymap.set('n', '<M-u>', '<C-u>zz', { desc = 'Page up' })
+vim.keymap.set('n', '<C-d>', '<C-d>zz', { desc = 'Page down' })
+vim.keymap.set('n', '<C-u>', '<C-u>zz', { desc = 'Page up' })
 
 -- Escape
 vim.keymap.set('n', '<Esc>', function()
@@ -75,7 +77,7 @@ vim.keymap.set('v', 'K', ":m '<-2<CR>gv=gv")
 vim.keymap.set('v', 'J', ":m '>+1<CR>gv=gv")
 
 -- obsidian commands safe to use outside obsidian
-vim.keymap.set('n', '<leader>os', '<cmd>ObsidianSearch<CR>', { desc = '[o]bsidian [s]earch' })
+-- vim.keymap.set('n', '<leader>os', '<cmd>ObsidianSearch<CR>', { desc = '[o]bsidian [s]earch' })
 vim.keymap.set('n', '<leader>on', '<cmd>ObsidianNew<CR>', { desc = '[o]bsidian [n]ew' })
 vim.keymap.set('n', '<leader>ot', '<cmd>ObsidianToday<CR>', { desc = '[o]bsidian [t]oday' })
 vim.keymap.set('n', '<leader>or', '<cmd>ObsidianRename<CR>', { desc = '[o]bsidian [r]ename' })

@@ -67,6 +67,8 @@ return { -- Fuzzy Finder (files, lsp, etc)
     vim.keymap.set('n', '<M-p>', builtin.find_files)
     vim.keymap.set('n', '<M-Space>', builtin.find_files)
     vim.keymap.set('n', '<M-P>', builtin.git_files)
+    vim.keymap.set('n', '<leader>sp', builtin.find_files, { desc = '[s]earch [p]roject' })
+    vim.keymap.set('n', '<leader>sP', builtin.git_files, { desc = '[s]earch [P]roject, git' })
     vim.keymap.set('n', '<M-f>', builtin.current_buffer_fuzzy_find)
     vim.keymap.set('n', '<M-S-f>', builtin.live_grep)
 
