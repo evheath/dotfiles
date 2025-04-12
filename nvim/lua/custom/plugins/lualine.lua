@@ -1,3 +1,4 @@
+-- https://github.com/nvim-lualine/lualine.nvim/blob/master/README.md
 return {
   'nvim-lualine/lualine.nvim',
   dependencies = { 'nvim-tree/nvim-web-devicons' },
