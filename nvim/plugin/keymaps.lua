@@ -54,6 +54,12 @@ vim.keymap.set('n', '<leader>cr', vim.lsp.buf.rename, { desc = '[c]ode [r]ename 
 vim.keymap.set('n', '<leader>ca', vim.lsp.buf.code_action, { desc = '[c]ode [a]ction' })
 vim.keymap.set('n', '<leader>ct', vim.lsp.buf.hover, { desc = '[c]ode peek [t]ype' })
 
+-- sourcing
+vim.keymap.set('n', '<leader>x', function()
+  vim.cmd 'source %'
+  print('sourced ' .. vim.fn.expand '%')
+end, { desc = 'source current file' })
+
 -- comments
 vim.keymap.set('n', '<M-/>', 'gcc', { desc = 'comment', remap = true })
 vim.keymap.set('v', '<M-/>', 'gc', { desc = 'comment', remap = true })
