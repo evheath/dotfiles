@@ -40,14 +40,14 @@ return {
         -- Actions
         map('v', '<leader>gs', function()
           gitsigns.stage_hunk { vim.fn.line '.', vim.fn.line 'v' }
-        end, { desc = '[g]it [s]tage, hunk' })
+        end, { desc = '[s]tage, hunk' })
         map('v', '<leader>gr', function()
           gitsigns.reset_hunk { vim.fn.line '.', vim.fn.line 'v' }
-        end, { desc = '[g]it [r]eset, hunk' })
-        map('n', '<leader>gs', gitsigns.stage_hunk, { desc = '[g]it [s]tage, hunk' })
-        map('n', '<leader>gr', gitsigns.reset_hunk, { desc = '[g]it [r]eset, hunk' })
-        map('n', '<leader>gS', gitsigns.stage_buffer, { desc = '[g]it [S]tage, buffer' })
-        map('n', '<leader>gR', gitsigns.reset_buffer, { desc = '[g]it [R]eset, buffer' })
+        end, { desc = '[r]eset, hunk' })
+        map('n', '<leader>gs', gitsigns.stage_hunk, { desc = '[s]tage, hunk' })
+        map('n', '<leader>gr', gitsigns.reset_hunk, { desc = '[r]eset, hunk' })
+        map('n', '<leader>gS', gitsigns.stage_buffer, { desc = '[S]tage, buffer' })
+        map('n', '<leader>gR', gitsigns.reset_buffer, { desc = '[R]eset, buffer' })
         map('n', '<leader>td', function()
           if vim.wo.diff then
             vim.cmd 'diffoff'
@@ -55,7 +55,7 @@ return {
           else
             gitsigns.diffthis()
           end
-        end, { desc = '[t]oggle [d]iff vs staged' })
+        end, { desc = 'view [d]iff vs staged' })
         map('n', '<leader>tD', function()
           if vim.wo.diff then
             vim.cmd 'diffoff'
@@ -63,7 +63,7 @@ return {
           else
             gitsigns.diffthis '@'
           end
-        end, { desc = '[t]oggle [D]iff vs commit' })
+        end, { desc = 'view [D]iff vs commit' })
       end,
     },
   },

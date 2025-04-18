@@ -57,24 +57,23 @@ return { -- Fuzzy Finder (files, lsp, etc)
 
     vim.keymap.set('n', '<leader>sn', function()
       builtin.live_grep { cwd = '~/notes/' }
-    end, { desc = '[s]earch [n]otes' })
+    end, { desc = '[n]otes' })
     vim.keymap.set('n', '<leader>sd', function()
       builtin.find_files { cwd = '~/code/dotfiles/' }
-    end, { desc = '[s]earch [d]otfiles' })
-    vim.keymap.set('n', '<leader>sh', builtin.help_tags, { desc = '[s]earch vim [h]elp' })
-    vim.keymap.set('n', '<leader>sk', builtin.keymaps, { desc = '[s]earch [k]eymaps' })
+    end, { desc = '[d]otfiles' })
+    vim.keymap.set('n', '<leader>sh', builtin.help_tags, { desc = 'vim [h]elp' })
+    vim.keymap.set('n', '<leader>sk', builtin.keymaps, { desc = '[k]eymaps' })
 
     vim.keymap.set('n', '<M-p>', builtin.find_files)
     vim.keymap.set('n', '<M-Space>', builtin.find_files)
     vim.keymap.set('n', '<M-P>', builtin.git_files)
-    vim.keymap.set('n', '<leader>sp', builtin.find_files, { desc = '[s]earch [p]roject' })
-    vim.keymap.set('n', '<leader>sP', builtin.git_files, { desc = '[s]earch [P]roject, git' })
+    vim.keymap.set('n', '<leader>sp', builtin.find_files, { desc = '[p]roject, all' })
+    vim.keymap.set('n', '<leader>sP', builtin.git_files, { desc = '[P]roject, git' })
     vim.keymap.set('n', '<M-f>', builtin.current_buffer_fuzzy_find)
     vim.keymap.set('n', '<M-S-f>', builtin.live_grep)
-    vim.keymap.set('n', '<leader><leader>', builtin.buffers, { desc = '[ ] Find existing buffers' })
-    vim.keymap.set('n', '<leader>sb', builtin.buffers, { desc = '[s]earch [b]uffers' })
+    vim.keymap.set('n', '<leader><leader>', builtin.buffers, { desc = '[ ] buffers' })
 
-    vim.keymap.set('n', '<leader>cf', builtin.lsp_references, { desc = '[c]ode [f]ind references' })
+    vim.keymap.set('n', '<leader>cf', builtin.lsp_references, { desc = '[f]ind references' })
 
     -- Enable Telescope extensions if they are installed
     pcall(require('telescope').load_extension, 'fzf')

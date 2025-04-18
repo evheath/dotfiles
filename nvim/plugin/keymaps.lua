@@ -50,9 +50,9 @@ vim.keymap.set('t', '<M-l>', '<C-l>', { desc = 'clear terminal' })
 vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = '[q]uickfix' }) -- maybe enable when I understand this
 
 -- LSP
-vim.keymap.set('n', '<leader>cr', vim.lsp.buf.rename, { desc = '[c]ode [r]ename symbol' })
-vim.keymap.set('n', '<leader>ca', vim.lsp.buf.code_action, { desc = '[c]ode [a]ction' })
-vim.keymap.set('n', '<leader>ct', vim.lsp.buf.hover, { desc = '[c]ode peek [t]ype' })
+vim.keymap.set('n', '<leader>cr', vim.lsp.buf.rename, { desc = '[r]ename symbol' })
+vim.keymap.set('n', '<leader>ca', vim.lsp.buf.code_action, { desc = '[a]ctions' })
+vim.keymap.set('n', '<leader>ct', vim.lsp.buf.hover, { desc = 'peek [t]ype' })
 
 -- sourcing
 vim.keymap.set('n', '<leader>x', function()
@@ -70,32 +70,30 @@ vim.keymap.set('x', '<leader>P', [["_dP]], { desc = 'void Paste' })
 vim.keymap.set({ 'n', 'v' }, '<leader>d', [["_d]], { desc = 'void delete' })
 
 -- toggles
-vim.keymap.set('n', '<leader>tr', ':set relativenumber! <CR>', { desc = '[t]oggle [r]elative line numbers' })
-vim.keymap.set('n', '<leader>tn', ':set nu! relativenumber!<CR>', { desc = '[t]oggle line [n]umbers' })
-vim.keymap.set('n', '<leader>tb', '<cmd>Gitsigns toggle_current_line_blame<CR>', { desc = '[t]oggle [b]lame' })
-vim.keymap.set('n', '<leader>tt', '<cmd>Floaterminal<CR>', { desc = '[t]oggle floating [t]erminal' })
+vim.keymap.set('n', '<leader>tr', ':set relativenumber! <CR>', { desc = '[r]elative line numbers' })
+vim.keymap.set('n', '<leader>tn', ':set nu! relativenumber!<CR>', { desc = 'line [n]umbers' })
+vim.keymap.set('n', '<leader>tb', '<cmd>Gitsigns toggle_current_line_blame<CR>', { desc = '[b]lame' })
 vim.keymap.set('n', '<leader>ts', function()
   vim.wo.spell = not vim.wo.spell
   print('Spell check ' .. (vim.wo.spell and 'enabled' or 'disabled'))
-end, { desc = '[t]oggle [s]pellcheck' })
+end, { desc = '[s]pellcheck' })
 
 -- copilot
 vim.keymap.set('n', '<leader>ld', function()
   vim.cmd 'Copilot disable'
   vim.notify 'Copilot disabled'
-end, { desc = 'copilot, [d]isable' })
+end, { desc = '[d]isable' })
 vim.keymap.set('n', '<leader>le', function()
   vim.cmd 'Copilot enable'
   vim.notify 'Copilot enabled'
-end, { desc = 'copilot, [e]nable' })
-vim.keymap.set('n', '<leader>ls', '<cmd>Copilot status<CR>', { desc = 'copilot, [s]tatus' })
+end, { desc = '[e]nable' })
+vim.keymap.set('n', '<leader>ls', '<cmd>Copilot status<CR>', { desc = '[s]tatus' })
 
 -- move selected lines
 vim.keymap.set('v', 'K', ":m '<-2<CR>gv=gv")
 vim.keymap.set('v', 'J', ":m '>+1<CR>gv=gv")
 
 -- obsidian commands safe to use outside obsidian
--- vim.keymap.set('n', '<leader>os', '<cmd>ObsidianSearch<CR>', { desc = '[o]bsidian [s]earch' })
-vim.keymap.set('n', '<leader>on', '<cmd>ObsidianNew<CR>', { desc = '[o]bsidian [n]ew' })
-vim.keymap.set('n', '<leader>ot', '<cmd>ObsidianToday<CR>', { desc = '[o]bsidian [t]oday' })
-vim.keymap.set('n', '<leader>or', '<cmd>ObsidianRename<CR>', { desc = '[o]bsidian [r]ename' })
+vim.keymap.set('n', '<leader>on', '<cmd>ObsidianNew<CR>', { desc = '[n]ew' })
+vim.keymap.set('n', '<leader>ot', '<cmd>ObsidianToday<CR>', { desc = '[t]oday' })
+vim.keymap.set('n', '<leader>or', '<cmd>ObsidianRename<CR>', { desc = '[r]ename' })

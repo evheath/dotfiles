@@ -21,7 +21,7 @@ return {
         action = function()
           return require('obsidian').util.gf_passthrough()
         end,
-        opts = { noremap = false, expr = true, buffer = true, desc = '[o]bsidian [f]ollow link' },
+        opts = { noremap = false, expr = true, buffer = true, desc = '[f]ollow link' },
       },
     },
     new_notes_location = 'notes_subdir',
