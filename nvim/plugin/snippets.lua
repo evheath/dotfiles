@@ -29,4 +29,16 @@ ls.add_snippets('go', {
     )
   ),
   s('log', fmt('log.Printf("{}:%v\\n", {}){}', { same(1), i(1), i(0) })),
+  s(
+    'for',
+    fmt(
+      [[
+  for {} , {} := range {} {{
+    log.Printf("{}[%v]:%v\n", {}, {})
+    {}
+  }} {}
+  ]],
+      { i(2, 'index'), i(3, 'value'), i(1, 'slice'), same(1), same(2), same(3), i(4), i(0) }
+    )
+  ),
 })
