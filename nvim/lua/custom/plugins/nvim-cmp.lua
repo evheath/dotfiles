@@ -30,11 +30,11 @@ return {
       },
       mapping = cmp.mapping.preset.insert {
         ['<C-n>'] = cmp.mapping.select_next_item(),
-        ['<Tab>'] = cmp.mapping.select_next_item(),
+        -- ['<Tab>'] = cmp.mapping.select_next_item(),
         ['<Down>'] = cmp.mapping.select_next_item(),
 
         ['<C-p>'] = cmp.mapping.select_prev_item(),
-        ['<S-Tab>'] = cmp.mapping.select_prev_item(),
+        -- ['<S-Tab>'] = cmp.mapping.select_prev_item(),
         ['<Up>'] = cmp.mapping.select_prev_item(),
 
         -- Scroll the documentation window [b]ack / [f]orward
