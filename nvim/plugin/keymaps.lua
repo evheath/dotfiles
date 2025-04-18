@@ -79,6 +79,17 @@ vim.keymap.set('n', '<leader>ts', function()
   print('Spell check ' .. (vim.wo.spell and 'enabled' or 'disabled'))
 end, { desc = '[t]oggle [s]pellcheck' })
 
+-- copilot
+vim.keymap.set('n', '<leader>ld', function()
+  vim.cmd 'Copilot disable'
+  vim.notify 'Copilot disabled'
+end, { desc = 'copilot, [d]isable' })
+vim.keymap.set('n', '<leader>le', function()
+  vim.cmd 'Copilot enable'
+  vim.notify 'Copilot enabled'
+end, { desc = 'copilot, [e]nable' })
+vim.keymap.set('n', '<leader>ls', '<cmd>Copilot status<CR>', { desc = 'copilot, [s]tatus' })
+
 -- move selected lines
 vim.keymap.set('v', 'K', ":m '<-2<CR>gv=gv")
 vim.keymap.set('v', 'J', ":m '>+1<CR>gv=gv")

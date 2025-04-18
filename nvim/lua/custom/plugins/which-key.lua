@@ -12,6 +12,7 @@ return {
     -- Document existing key chains
     spec = {
       { '<leader>c', group = '[c]ode' },
+      { '<leader>l', group = 'copi[l]ot' },
       { '<leader>s', group = '[s]earch' },
       { '<leader>t', group = '[t]oggle' },
       { '<leader>o', group = '[o]bsidian' },
