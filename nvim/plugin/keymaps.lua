@@ -8,8 +8,8 @@ vim.keymap.set('', '<ScrollWheelLeft>', '<Nop>', { noremap = true, silent = true
 vim.keymap.set('', '<ScrollWheelRight>', '<Nop>', { noremap = true, silent = true })
 
 -- navigation
--- vim.keymap.set('n', '<Tab>', '<cmd>bn<CR>', { desc = 'move to next buffer' })
--- vim.keymap.set('n', '<S-Tab>', '<cmd>bp<CR>', { desc = 'move to previous buffer' })
+vim.keymap.set('n', '<Tab>', '<cmd>bn<CR>', { desc = 'move to next buffer' })
+vim.keymap.set('n', '<S-Tab>', '<cmd>bp<CR>', { desc = 'move to previous buffer' })
 vim.keymap.set('n', '<M-w>', '<cmd>bd<CR>', { desc = 'close buffer' })
 -- vim.keymap.set('n', '<M-w>', function()
 --   if #vim.api.nvim_list_wins() > 1 then
