@@ -25,3 +25,6 @@ disabled = true
 
 [lua]
 disabled = true
+
+[ruby]
+disabled = true
