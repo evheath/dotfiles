@@ -67,6 +67,9 @@ function y() {
 	rm -f -- "$tmp"
 }
 
+# ruby/rbenv
+eval "$(rbenv init - --no-rehash zsh)"
+
 # starship https://starship.rs/
 eval "$(starship init zsh)"
 
