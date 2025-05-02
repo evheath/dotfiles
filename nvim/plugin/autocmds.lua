@@ -49,3 +49,12 @@ vim.api.nvim_create_autocmd('FileType', {
     vim.opt_local.spell = true
   end,
 })
+
+vim.api.nvim_create_autocmd('InsertLeave', {
+  pattern = { '*.go', '*.md', '*.ts', '*.lua' },
+  callback = function()
+    if vim.bo.modified and vim.bo.modifiable and vim.bo.buftype == '' then
+      vim.cmd 'write'
+    end
+  end,
+})

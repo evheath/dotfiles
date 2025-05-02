@@ -34,6 +34,9 @@ vim.keymap.set('n', '<C-u>', '<C-u>zz', { desc = 'Page up' })
 
 -- Escape
 vim.keymap.set('n', '<Esc>', function()
+  if vim.bo.modified and vim.bo.modifiable and vim.bo.buftype == '' then
+    vim.cmd 'write'
+  end
   vim.cmd 'nohlsearch' -- clear any searches
   vim.cmd 'fclose' -- close any floating window
   if vim.wo.diff then
