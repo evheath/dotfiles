@@ -4,6 +4,7 @@ return {
   config = function()
     require('notify').setup {
       background_colour = '#1E1E2E',
+      merge_duplicates = true,
     }
   end,
 }

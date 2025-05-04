@@ -11,6 +11,7 @@ return {
         gitsigns = true,
         neotree = true,
         treesitter = true,
+        noice = true,
         mini = {
           enabled = true,
           indentscope_color = '',
