@@ -53,3 +53,6 @@ ls.add_snippets('go', {
     )
   ),
 })
+ls.add_snippets('ruby', {
+  s('frozen', fmt('# frozen_string_literal: true{}', { i(0) })),
+})
