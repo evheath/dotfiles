@@ -17,7 +17,7 @@ return {
         lsp_format_opt = 'fallback'
       end
       return {
-        timeout_ms = 500,
+        timeout_ms = 3000,
         lsp_format = lsp_format_opt,
       }
     end,
@@ -28,7 +28,7 @@ return {
       --
       -- You can use 'stop_after_first' to run the first available formatter from the list
       -- javascript = { "prettierd", "prettier", stop_after_first = true },
+      ruby = { 'rubocop' },
     },
   },
 }
-
