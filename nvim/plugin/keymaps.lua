@@ -24,6 +24,7 @@ vim.keymap.set('n', '<M-l>', '<C-w>l', { desc = 'Move focus to the right window'
 vim.keymap.set('n', '<M-j>', '<C-w>j', { desc = 'Move focus to the lower window' })
 vim.keymap.set('n', '<M-k>', '<C-w>k', { desc = 'Move focus to the upper window' })
 vim.keymap.set('n', '<M-3>', '<cmd>b#<CR>', { desc = 'Previous buffer' })
+vim.keymap.set('n', '<M-t>', '<cmd>enew<CR>', { desc = 'New buffer' })
 vim.keymap.set('n', '-', '<cmd>Oil<CR>', { desc = 'Open oil, here' })
 vim.keymap.set('n', '_', '<cmd>Oil .<CR>', { desc = 'Open oil, project' })
 vim.keymap.set({ 'n', 't' }, '\\', '<cmd>Floaterminal<CR>', { desc = 'Open Floating Terminal' })
@@ -34,9 +35,9 @@ vim.keymap.set('n', '<C-u>', '<C-u>zz', { desc = 'Page up' })
 
 -- Escape
 vim.keymap.set('n', '<Esc>', function()
-  if vim.bo.modified and vim.bo.modifiable and vim.bo.buftype == '' then
-    vim.cmd 'write'
-  end
+  -- if vim.bo.modified and vim.bo.modifiable and vim.bo.buftype == '' then
+  --   vim.cmd 'write'
+  -- end
   vim.cmd 'nohlsearch' -- clear any searches
   vim.cmd 'fclose' -- close any floating window
   if vim.wo.diff then
