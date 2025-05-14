@@ -1,3 +1,4 @@
+-- https://github.com/folke/snacks.nvim/blob/main/docs/scratch.md
 return {
   'folke/snacks.nvim',
   priority = 1000,
