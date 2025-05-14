@@ -7,10 +7,17 @@
 vim.keymap.set('', '<ScrollWheelLeft>', '<Nop>', { noremap = true, silent = true })
 vim.keymap.set('', '<ScrollWheelRight>', '<Nop>', { noremap = true, silent = true })
 
--- navigation
-vim.keymap.set('n', '<Tab>', '<cmd>bn<CR>', { desc = 'move to next buffer' })
-vim.keymap.set('n', '<S-Tab>', '<cmd>bp<CR>', { desc = 'move to previous buffer' })
+-- buffers
+vim.keymap.set('n', '<S-l>', '<cmd>bn<CR>', { desc = 'move to next buffer' })
+vim.keymap.set('n', ']b', '<cmd>bn<CR>', { desc = 'move to next buffer' })
+vim.keymap.set('n', '<S-h>', '<cmd>bp<CR>', { desc = 'move to previous buffer' })
+vim.keymap.set('n', '[b', '<cmd>bp<CR>', { desc = 'move to previous buffer' })
 vim.keymap.set('n', '<M-w>', '<cmd>bd<CR>', { desc = 'close buffer' })
+vim.keymap.set('n', '<leader>bd', '<cmd>bd<CR>', { desc = 'close buffer' })
+vim.keymap.set('n', '<leader>bo', '<cmd>CloseOthers<CR>', { desc = 'close other buffers' })
+vim.keymap.set('n', '<M-3>', '<cmd>b#<CR>', { desc = 'buffer quickswitch' })
+vim.keymap.set('n', '<leader>`', '<cmd>b#<CR>', { desc = 'buffer quickswitch' })
+-- vim.keymap.set('n', '<M-t>', '<cmd>enew<CR>', { desc = 'New buffer' })
 -- vim.keymap.set('n', '<M-w>', function()
 --   if #vim.api.nvim_list_wins() > 1 then
 --     vim.cmd 'close'
@@ -18,13 +25,11 @@ vim.keymap.set('n', '<M-w>', '<cmd>bd<CR>', { desc = 'close buffer' })
 --     vim.cmd 'bdelete'
 --   end
 -- end, { desc = 'close window or delete buffer' })
-vim.keymap.set('n', '<M-W>', '<cmd>bd!<CR>', { desc = 'force close buffer' })
-vim.keymap.set('n', '<M-h>', '<C-w>h', { desc = 'Move focus to the left window' })
-vim.keymap.set('n', '<M-l>', '<C-w>l', { desc = 'Move focus to the right window' })
-vim.keymap.set('n', '<M-j>', '<C-w>j', { desc = 'Move focus to the lower window' })
-vim.keymap.set('n', '<M-k>', '<C-w>k', { desc = 'Move focus to the upper window' })
-vim.keymap.set('n', '<M-3>', '<cmd>b#<CR>', { desc = 'Previous buffer' })
-vim.keymap.set('n', '<M-t>', '<cmd>enew<CR>', { desc = 'New buffer' })
+-- vim.keymap.set('n', '<M-W>', '<cmd>bd!<CR>', { desc = 'force close buffer' })
+vim.keymap.set('n', '<C-h>', '<C-w>h', { desc = 'Move focus to the left window' })
+vim.keymap.set('n', '<C-l>', '<C-w>l', { desc = 'Move focus to the right window' })
+vim.keymap.set('n', '<C-j>', '<C-w>j', { desc = 'Move focus to the lower window' })
+vim.keymap.set('n', '<C-k>', '<C-w>k', { desc = 'Move focus to the upper window' })
 vim.keymap.set('n', '-', '<cmd>Oil<CR>', { desc = 'Open oil, here' })
 vim.keymap.set('n', '_', '<cmd>Oil .<CR>', { desc = 'Open oil, project' })
 vim.keymap.set({ 'n', 't' }, '\\', '<cmd>Floaterminal<CR>', { desc = 'Open Floating Terminal' })
