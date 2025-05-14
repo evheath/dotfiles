@@ -63,7 +63,6 @@ return { -- Fuzzy Finder (files, lsp, etc)
     end, { desc = '[d]otfiles' })
     vim.keymap.set('n', '<leader>sh', builtin.help_tags, { desc = 'vim [h]elp' })
     vim.keymap.set('n', '<leader>sk', builtin.keymaps, { desc = '[k]eymaps' })
-
     vim.keymap.set('n', '<M-p>', builtin.find_files)
     vim.keymap.set('n', '<M-Space>', builtin.find_files)
     vim.keymap.set('n', '<M-P>', builtin.git_files)
