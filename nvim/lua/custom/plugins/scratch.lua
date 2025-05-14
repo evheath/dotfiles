@@ -2,9 +2,10 @@ return {
   'folke/snacks.nvim',
   priority = 1000,
   lazy = false,
-  ---@type snacks.Config
   opts = {
-    picker = { enabled = true },
+    scratch = {
+      ft = 'markdown',
+    },
   },
   keys = {
     {
@@ -12,7 +13,7 @@ return {
       function()
         Snacks.scratch()
       end,
-      desc = 'Toggle Scratch Buffer',
+      desc = 'scratch',
     },
   },
 }

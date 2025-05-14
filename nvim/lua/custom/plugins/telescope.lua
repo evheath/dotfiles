@@ -55,9 +55,12 @@ return { -- Fuzzy Finder (files, lsp, etc)
     -- telescope keymaps
     local builtin = require 'telescope.builtin'
 
-    vim.keymap.set('n', '<leader>sn', function()
+    vim.keymap.set('n', '<leader>so', function()
       builtin.live_grep { cwd = '~/notes/' }
-    end, { desc = '[n]otes' })
+    end, { desc = '[o]bsidian' })
+    vim.keymap.set('n', '<leader>os', function()
+      builtin.live_grep { cwd = '~/notes/' }
+    end, { desc = '[s]earch' })
     vim.keymap.set('n', '<leader>sd', function()
       builtin.find_files { cwd = '~/code/dotfiles/' }
     end, { desc = '[d]otfiles' })

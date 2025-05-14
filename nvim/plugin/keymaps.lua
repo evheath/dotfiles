@@ -12,7 +12,7 @@ vim.keymap.set('n', '-', '<cmd>Oil<CR>', { desc = 'Open oil, here' })
 vim.keymap.set('n', '_', '<cmd>Oil .<CR>', { desc = 'Open oil, project' })
 
 -- notifications
-vim.keymap.set('n', 'n', '<cmd>Noice pick<CR>', { desc = 'Notifications' })
+vim.keymap.set('n', '<leader>sn', '<cmd>Telescope noice<CR>', { desc = '[n]otifications' })
 
 -- buffers
 vim.keymap.set('n', '<S-l>', '<cmd>bn<CR>', { desc = 'move to next buffer' })
