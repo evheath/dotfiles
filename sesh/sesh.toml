@@ -12,6 +12,6 @@ sort_order = [
 ]
 
 [default_session]
-startup_command = "vim +Oil" # open vim with file manager
+startup_command = "vim"
 preview_command = "eza --oneline --all --icons=always --color=always {}"
 startup_command_ignore_dirs = ["~/"]
