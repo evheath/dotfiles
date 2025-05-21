@@ -3,9 +3,13 @@ return {
   'folke/snacks.nvim',
   priority = 1000,
   lazy = false,
+  ---@type snacks.Config
   opts = {
     scratch = {
       ft = 'markdown',
+    },
+    explorer = {
+      enabled = true,
     },
   },
   keys = {
@@ -15,6 +19,13 @@ return {
         Snacks.scratch()
       end,
       desc = 'scratch',
+    },
+    {
+      '<leader>e',
+      function()
+        Snacks.explorer()
+      end,
+      desc = 'File Explorer',
     },
   },
 }
