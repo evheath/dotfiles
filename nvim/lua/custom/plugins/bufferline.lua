@@ -5,7 +5,7 @@ return {
   event = 'VeryLazy',
   opts = {
     options = {
-      separator_style = 'slant',
+      separator_style = 'slope',
       always_show_bufferline = true,
       offsets = {
         {
