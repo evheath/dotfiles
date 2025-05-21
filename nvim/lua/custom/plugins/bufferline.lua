@@ -1,10 +1,8 @@
 -- https://github.com/akinsho/bufferline.nvim?tab=readme-ov-file#--bufferlinenvim
 return {
   'akinsho/bufferline.nvim',
-  -- version = '*',
   dependencies = 'nvim-tree/nvim-web-devicons',
   event = 'VeryLazy',
-  -- lazy = false,
   opts = {
     options = {
       separator_style = 'slant',
@@ -17,6 +15,11 @@ return {
     },
   },
   config = function(_, opts)
-    require('bufferline').setup(opts)
+    local bufferline = require 'bufferline'
+    local catppuccin_ok, catppuccin = pcall(require, 'catppuccin.groups.integrations.bufferline')
+    if catppuccin_ok then
+      opts.highlights = catppuccin.get()
+    end
+    bufferline.setup(opts)
   end,
 }
