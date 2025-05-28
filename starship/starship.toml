@@ -11,11 +11,11 @@ disabled = true
 [gcloud]
 disabled = true
 
-[golang]
-disabled = true
+# [golang]
+# disabled = true
 
-[nodejs]
-disabled = true
+# [nodejs]
+# disabled = true
 
 [git_branch]
 format = '[$symbol$branch(:$remote_branch)]($style) '
@@ -23,8 +23,11 @@ format = '[$symbol$branch(:$remote_branch)]($style) '
 [battery]
 disabled = true
 
-[lua]
-disabled = true
+# [lua]
+# disabled = true
 
-[ruby]
-disabled = true
+# [ruby]
+# disabled = true
+
+# [php]
+# disabled = true
