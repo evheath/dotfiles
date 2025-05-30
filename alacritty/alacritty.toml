@@ -17,7 +17,7 @@ size = 16
 startup_mode = "Maximized"
 option_as_alt = "Both"
 decorations = "Buttonless"
-padding = { x = 2, y = 0 }
+padding = { x = 4, y = 4 }
 dynamic_padding = true
 # opacity = 0.55
 # blur = true
@@ -27,6 +27,7 @@ hide_when_typing = true
 
 [keyboard]
 bindings = [
+  { key = "Q", mods = "Command", action = "None" }, # disable command q
   { key = "Space", mods = "Command", chars = "\u001b[99~"}, # escape sequence to launch sesh
   { key = "t", mods = "Command", chars = "\u0002c"}, # new tmux window
   { key = "w", mods = "Command", chars = "\u0002x"}, # close tmux pane/window
