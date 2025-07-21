@@ -21,6 +21,7 @@ vim.keymap.set('n', '<S-h>', '<cmd>bp<CR>', { desc = 'previous buffer' })
 vim.keymap.set('n', '[b', '<cmd>bp<CR>', { desc = 'previous buffer' })
 -- vim.keymap.set('n', '<M-w>', '<cmd>bd<CR>', { desc = 'close buffer' })
 vim.keymap.set('n', '<leader>bd', '<cmd>bd<CR>', { desc = 'close buffer' })
+vim.keymap.set('n', '<leader>bt', '<cmd>enew<CR>', { desc = 'new empty buffer' })
 vim.keymap.set('n', '<leader>bo', '<cmd>CloseOthers<CR>', { desc = 'close other buffers' })
 vim.keymap.set('n', '[B', '<cmd>BufferLineMovePrev<CR>', { desc = 'move buffer left' })
 vim.keymap.set('n', ']B', '<cmd>BufferLineMoveNext<CR>', { desc = 'move buffer right' })
@@ -50,7 +51,13 @@ vim.keymap.set('n', '<Esc>', function()
   --   vim.cmd 'write'
   -- end
   vim.cmd 'nohlsearch' -- clear any searches
-  vim.cmd 'fclose' -- close any floating window
+
+  -- Don't close if we're in the snacks explorer
+  local win_config = vim.api.nvim_win_get_config(0)
+  if win_config.relative ~= '' and not vim.bo.filetype:match 'snacks_picker' then
+    vim.cmd 'fclose' -- close any floating window (except snacks explorer)
+  end
+
   if vim.wo.diff then
     vim.cmd 'diffoff' -- toggle diff off
     vim.cmd 'only' -- toggle diff off
@@ -85,6 +92,9 @@ vim.keymap.set('x', '<leader>P', [["_dP]], { desc = 'void Paste' })
 vim.keymap.set({ 'n', 'v' }, '<leader>d', [["_d]], { desc = 'void delete' })
 
 -- toggles
+vim.keymap.set('n', '<leader>tw', function()
+  vim.wo.wrap = not vim.wo.wrap
+end, { desc = '[w]ord wrap' })
 vim.keymap.set('n', '<leader>tr', ':set relativenumber! <CR>', { desc = '[r]elative line numbers' })
 vim.keymap.set('n', '<leader>tn', ':set nu! relativenumber!<CR>', { desc = 'line [n]umbers' })
 vim.keymap.set('n', '<leader>tb', '<cmd>Gitsigns toggle_current_line_blame<CR>', { desc = 'git [b]lame' })
@@ -92,6 +102,19 @@ vim.keymap.set('n', '<leader>ts', function()
   vim.wo.spell = not vim.wo.spell
   print('Spell check ' .. (vim.wo.spell and 'enabled' or 'disabled'))
 end, { desc = '[s]pellcheck' })
+vim.keymap.set('n', '<leader>tz', function()
+  -- Close snacks explorer if it's open
+  for _, win in ipairs(vim.api.nvim_list_wins()) do
+    local buf = vim.api.nvim_win_get_buf(win)
+    local ft = vim.api.nvim_buf_get_option(buf, 'filetype')
+    if ft:match 'snacks_picker' then
+      vim.api.nvim_win_close(win, true)
+    end
+  end
+
+  -- Focus current window by closing all others
+  vim.cmd 'only'
+end, { desc = '[z]en mode' })
 
 -- copilot
 vim.keymap.set('n', '<leader>ld', function()
