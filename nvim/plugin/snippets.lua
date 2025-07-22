@@ -68,6 +68,7 @@ ls.add_snippets('eruby', {
   s('each', fmt('<% {}.each do |{}| %>\n  {}\n<% end %>', { i(1, 'collection'), i(2, 'item'), i(0) })),
   s('eachidx', fmt('<% {}.each_with_index do |{}, {}| %>\n  {}\n<% end %>', { i(1, 'collection'), i(2, 'item'), i(3, 'index'), i(0) })),
   s('link', fmt('<%= link_to "{}", {} %>', { i(1, 'text'), i(0, 'path') })),
+  s('stylesheet', fmt('<%= stylesheet_link_tag "{}", "data-turbo-track": "reload" %>{}', { i(1), i(0) })),
   s('form', fmt('<%= form_with {} do |f| %>\n  {}\n<% end %>', { i(1, 'model: @model'), i(0) })),
   s('submit', fmt('<%= f.submit "{}", class: "{}" %>', { i(1, 'Submit'), i(0, 'btn btn-primary') })),
   s('field', fmt('<%= f.{} :{}, class: "{}" %>', { i(1, 'text_field'), i(2, 'attribute'), i(0, 'form-control') })),
@@ -76,4 +77,5 @@ ls.add_snippets('eruby', {
   s('renderw', fmt('<%= render "{}", {}: {} %>', { i(1, 'partial'), i(2, 'locals'), i(0, '@variable') })),
   s('content', fmt('<%= content_tag :{}, {} do %>\n  {}\n<% end %>', { i(1, 'div'), i(2, 'class: "class-name"'), i(0) })),
   s('image', fmt('<%= image_tag "{}", alt: "{}" %>', { i(1, 'path'), i(0, 'description') })),
+  s('head', fmt('<% content_for :head do %>\n {}\n<% end %>', { i(0) })),
 })
