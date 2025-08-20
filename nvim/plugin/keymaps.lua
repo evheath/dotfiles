@@ -47,16 +47,13 @@ vim.keymap.set('n', '<C-k>', '<C-w>k', { desc = 'Move focus to the upper window'
 
 -- Escape
 vim.keymap.set('n', '<Esc>', function()
-  -- if vim.bo.modified and vim.bo.modifiable and vim.bo.buftype == '' then
-  --   vim.cmd 'write'
-  -- end
   vim.cmd 'nohlsearch' -- clear any searches
 
   -- Don't close if we're in the snacks explorer
-  local win_config = vim.api.nvim_win_get_config(0)
-  if win_config.relative ~= '' and not vim.bo.filetype:match 'snacks_picker' then
-    vim.cmd 'fclose' -- close any floating window (except snacks explorer)
-  end
+  -- local win_config = vim.api.nvim_win_get_config(0)
+  -- if win_config.relative ~= '' and not vim.bo.filetype:match 'snacks_picker' then
+  --   vim.cmd 'fclose' -- close any floating window (except snacks explorer)
+  -- end
 
   if vim.wo.diff then
     vim.cmd 'diffoff' -- toggle diff off

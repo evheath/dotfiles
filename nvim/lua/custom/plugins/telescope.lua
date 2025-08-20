@@ -37,7 +37,7 @@ return { -- Fuzzy Finder (files, lsp, etc)
           '^.DS_Store',
         },
         mappings = {
-          i = { ['<esc>'] = require('telescope.actions').close },
+          -- i = { ['<esc>'] = require('telescope.actions').close },
         },
       },
       pickers = {
