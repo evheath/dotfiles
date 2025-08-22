@@ -75,6 +75,24 @@ vim.keymap.set('n', '<leader>x', function()
   print('sourced ' .. vim.fn.expand '%')
 end, { desc = 'source current file' })
 
+-- yanking
+vim.keymap.set('n', '<leader>yp', function()
+  local path = vim.fn.expand '%:~:.'
+  vim.fn.setreg('+', path)
+  print('Copied: ' .. path)
+end, { desc = 'yank relative [p]ath' })
+vim.keymap.set('n', '<leader>yP', function()
+  local path = vim.fn.expand '%:p'
+  vim.fn.setreg('+', path)
+  print('Copied: ' .. path)
+end, { desc = 'yank absolute [P]ath' })
+vim.keymap.set('n', '<leader>yf', function()
+  local path = vim.fn.expand '%:t'
+  vim.fn.setreg('+', path)
+  print('Copied: ' .. path)
+end, { desc = 'yank [f]ilename' })
+vim.keymap.set('n', '<leader>ya', '<cmd>%y<CR>', { desc = 'yank [a]ll in buffer' })
+
 -- comments
 -- vim.keymap.set('n', '<M-/>', 'gcc', { desc = 'comment', remap = true })
 -- vim.keymap.set('v', '<M-/>', 'gc', { desc = 'comment', remap = true })
