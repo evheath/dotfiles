@@ -58,4 +58,10 @@ windows:
   - vim: vim
   - claude: claude
   - git: lg
-  - zsh: ls
+  - server:
+      layout: main-vertical
+      panes:
+        - bin/dev
+        - bundle exec sidekiq
+  - console: bin/rails console
+  - zsh: pwd

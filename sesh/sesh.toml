@@ -5,9 +5,9 @@ blacklist = [
 ]
 
 sort_order = [
+    "tmux",
     "tmuxinator", # shown first
     "config",
-    "tmux",
     "zoxide",
 ]
 
