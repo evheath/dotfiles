@@ -58,10 +58,11 @@ windows:
   - vim: vim
   - claude: claude
   - git: lg
-  - server:
-      layout: main-vertical
-      panes:
-        - bin/dev
-        - bundle exec sidekiq
+  # server done in iterm for now due to easier terminal copying
+  # - server:
+  #     layout: main-vertical
+  #     panes:
+  #       - bin/dev
+  #       - bundle exec sidekiq
   - console: bin/rails console
   - zsh: pwd
