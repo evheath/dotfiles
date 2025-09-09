@@ -1,6 +1,7 @@
 -- https://github.com/akinsho/bufferline.nvim?tab=readme-ov-file#--bufferlinenvim
 return {
   'akinsho/bufferline.nvim',
+  enabled = false,
   dependencies = 'nvim-tree/nvim-web-devicons',
   event = 'VeryLazy',
   opts = {
