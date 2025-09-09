@@ -24,7 +24,7 @@ vim.keymap.set('n', '<leader>bh', '<cmd>BufferLineMovePrev<CR>', { desc = 'move 
 vim.keymap.set('n', '<leader>bl', '<cmd>BufferLineMoveNext<CR>', { desc = 'move buffer right' })
 vim.keymap.set('n', '<leader>bp', '<cmd>BufferLineTogglePin<CR>', { desc = '[p]in' })
 vim.keymap.set('n', '<leader>bP', '<cmd>BufferLineGroupClose ungrouped<CR>', { desc = 'close non-[P]inned' })
--- vim.keymap.set('n', '<leader>`', '<cmd>b#<CR>', { desc = 'buffer quickswitch' })
+vim.keymap.set('n', '<leader>`', '<cmd>b#<CR>', { desc = 'buffer quickswitch' })
 
 -- navigation
 vim.keymap.set({ 'n', 't' }, '\\', '<cmd>Floaterminal<CR>', { desc = 'Open Floating Terminal' })
@@ -43,6 +43,8 @@ vim.keymap.set('n', '<C-k>', '<C-w>k', { desc = 'Move focus to the upper window'
 
 -- Escape
 vim.keymap.set('n', '<Esc>', function()
+  vim.cmd 'NoiceDismiss' -- clear notifications
+
   vim.cmd 'nohlsearch' -- clear any searches
 
   -- Don't close if we're in the snacks explorer
@@ -108,7 +110,8 @@ vim.keymap.set('n', '<leader>tw', function()
 end, { desc = '[w]ord wrap' })
 vim.keymap.set('n', '<leader>tr', ':set relativenumber! <CR>', { desc = '[r]elative line numbers' })
 vim.keymap.set('n', '<leader>tn', ':set nu! relativenumber!<CR>', { desc = 'line [n]umbers' })
-vim.keymap.set('n', '<leader>tb', '<cmd>Gitsigns toggle_current_line_blame<CR>', { desc = 'git [b]lame' })
+vim.keymap.set('n', '<leader>tB', '<cmd>Gitsigns blame<CR>', { desc = 'git [B]lame' })
+vim.keymap.set('n', '<leader>tb', '<cmd>Gitsigns toggle_current_line_blame<CR>', { desc = 'git [b]lame line' })
 vim.keymap.set('n', '<leader>ts', function()
   vim.wo.spell = not vim.wo.spell
   print('Spell check ' .. (vim.wo.spell and 'enabled' or 'disabled'))
