@@ -31,15 +31,15 @@ bindings = [
   { key = "Space", mods = "Command", chars = "\u001b[99~"}, # escape sequence to launch sesh
   { key = "t", mods = "Command", chars = "\u0002c"}, # new tmux window
   { key = "w", mods = "Command", chars = "\u0002x"}, # close tmux pane/window
-  { key = "1", mods = "Command", chars = "\u00021"}, # go to tmux window 1
-  { key = "2", mods = "Command", chars = "\u00022"}, # go to tmux window 2
-  { key = "3", mods = "Command", chars = "\u00023"}, # go to tmux window 3
-  { key = "4", mods = "Command", chars = "\u00024"}, # go to tmux window 4
-  { key = "5", mods = "Command", chars = "\u00025"}, # go to tmux window 5
-  { key = "6", mods = "Command", chars = "\u00026"}, # go to tmux window 6
-  { key = "7", mods = "Command", chars = "\u00027"}, # go to tmux window 7
-  { key = "8", mods = "Command", chars = "\u00028"}, # go to tmux window 8
-  { key = "9", mods = "Command", chars = "\u00029"}, # go to tmux window 9
+  # { key = "1", mods = "Command", chars = "\u00021"}, # go to tmux window 1
+  # { key = "2", mods = "Command", chars = "\u00022"}, # go to tmux window 2
+  # { key = "3", mods = "Command", chars = "\u00023"}, # go to tmux window 3
+  # { key = "4", mods = "Command", chars = "\u00024"}, # go to tmux window 4
+  # { key = "5", mods = "Command", chars = "\u00025"}, # go to tmux window 5
+  # { key = "6", mods = "Command", chars = "\u00026"}, # go to tmux window 6
+  # { key = "7", mods = "Command", chars = "\u00027"}, # go to tmux window 7
+  # { key = "8", mods = "Command", chars = "\u00028"}, # go to tmux window 8
+  # { key = "9", mods = "Command", chars = "\u00029"}, # go to tmux window 9
   { key = "Left", mods = "Command", chars = "\u0002\u001b[D"}, # navigate to pane, left
   { key = "Down", mods = "Command", chars = "\u0002\u001b[B"}, # navigate to pane, down
   { key = "Up", mods = "Command", chars = "\u0002\u001b[A"}, # navigate to pane, up
