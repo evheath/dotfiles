@@ -174,7 +174,15 @@ return {
     local servers = {
       -- See `:help lspconfig-all` for a list of all the pre-configured LSPs
       gopls = {},
-      ruby_lsp = {},
+      ruby_lsp = {
+        settings = {
+          rubyLsp = {
+            rails = {
+              codeActions = false,
+            },
+          },
+        },
+      },
       rubocop = {},
       htmlbeautifier = {},
       ts_ls = {},
