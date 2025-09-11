@@ -12,9 +12,9 @@ return {
     },
     columns = {
       'icon',
-      'permissions',
-      'size',
-      'mtime',
+      -- 'permissions',
+      -- 'size',
+      -- 'mtime',
     },
     preview = {
       max_width = 0.9,
@@ -23,7 +23,7 @@ return {
       max_height = 0.9,
       min_height = { 5, 0.1 },
       height = nil,
-      border = "rounded",
+      border = 'rounded',
       win_options = {
         winblend = 0,
       },
@@ -34,12 +34,12 @@ return {
     watch_for_changes = false,
   },
   config = function(_, opts)
-    require("oil").setup(opts)
+    require('oil').setup(opts)
     -- Auto-open preview when oil opens
-    vim.api.nvim_create_autocmd("User", {
-      pattern = "OilEnter",
+    vim.api.nvim_create_autocmd('User', {
+      pattern = 'OilEnter',
       callback = vim.schedule_wrap(function(args)
-        local oil = require("oil")
+        local oil = require 'oil'
         if vim.api.nvim_get_current_buf() == args.data.buf then
           oil.open_preview()
         end
