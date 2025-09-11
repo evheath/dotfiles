@@ -55,6 +55,7 @@ ls.add_snippets('go', {
 })
 ls.add_snippets('ruby', {
   s('frozen', fmt('# frozen_string_literal: true{}', { i(0) })),
+  s('asterisks', fmt('puts "*" * 50\n{}\nputs "*" * 50\n', { i(0) })),
 })
 
 ls.add_snippets('eruby', {
