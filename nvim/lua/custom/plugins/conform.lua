@@ -24,7 +24,14 @@ return {
     formatters_by_ft = {
       lua = { 'stylua' },
       css = { 'prettier' },
-      eruby = { 'htmlbeautifier' },
+      eruby = function(bufnr)
+        -- Only use htmlbeautifier for .html.erb files, not .rb.erb
+        local filename = vim.api.nvim_buf_get_name(bufnr)
+        if filename:match('%.html%.erb$') then
+          return { 'htmlbeautifier' }
+        end
+        return {}
+      end,
       -- Conform can also run multiple formatters sequentially
       -- python = { "isort", "black" },
       --
