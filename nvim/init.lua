@@ -5,4 +5,6 @@ vim.g.loaded_netrwPlugin = 1
 
 vim.g.copilot_enabled = false -- copilot off by default
 
+vim.opt.signcolumn = 'yes'
+
 require 'custom.lazy'
