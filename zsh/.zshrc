@@ -67,6 +67,10 @@ function y() {
 	rm -f -- "$tmp"
 }
 
+# Homebrew (ARM)
+eval "$(/opt/homebrew/bin/brew shellenv)"
+alias ibrew="/usr/local/bin/brew"
+
 # ruby/rbenv
 eval "$(rbenv init - --no-rehash zsh)"
 
@@ -76,9 +80,4 @@ eval "$(starship init zsh)"
 # https://github.com/ajeetdsouza/zoxide
 # zoxide (keep at bottom)
 eval "$(zoxide init zsh)"
-
-# Homebrew
-eval "$(/usr/local/bin/brew shellenv)"
-alias ibrew="/usr/local/bin/brew"
-export PATH="/opt/homebrew/bin:$HOME/.local/bin:$PATH"
 
