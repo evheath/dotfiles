@@ -70,7 +70,8 @@ vim.opt.scrolloff = 10
 -- nvim-tree wants this
 vim.opt.termguicolors = true
 
-vim.opt.wrap = false
+-- word wrap enabled by default
+vim.opt.wrap = true
 
 -- no swaps
 vim.opt.swapfile = false
