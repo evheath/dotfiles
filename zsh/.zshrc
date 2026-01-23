@@ -68,8 +68,8 @@ function y() {
 }
 
 # Homebrew (ARM)
+# Makes all brew-installed tools available shell
 eval "$(/opt/homebrew/bin/brew shellenv)"
-alias ibrew="/usr/local/bin/brew"
 
 # ruby/rbenv
 eval "$(rbenv init - --no-rehash zsh)"
