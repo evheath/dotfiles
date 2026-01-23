@@ -81,3 +81,6 @@ eval "$(starship init zsh)"
 # zoxide (keep at bottom)
 eval "$(zoxide init zsh)"
 
+
+# bun completions
+[ -s "/Users/elliot/.bun/_bun" ] && source "/Users/elliot/.bun/_bun"
