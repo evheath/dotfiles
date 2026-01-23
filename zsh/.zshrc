@@ -77,3 +77,9 @@ eval "$(starship init zsh)"
 # zoxide (keep at bottom)
 eval "$(zoxide init zsh)"
 
+# Homebrew (Intel as default)
+eval "$(/usr/local/bin/brew shellenv)"
+alias abrew="/opt/homebrew/bin/brew"
+
+# Prioritize ARM binaries and local bin
+export PATH="/opt/homebrew/bin:$HOME/.local/bin:$PATH"
