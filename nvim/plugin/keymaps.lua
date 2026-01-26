@@ -132,15 +132,15 @@ vim.keymap.set('n', '<leader>tz', function()
 end, { desc = '[z]en mode' })
 
 -- copilot
-vim.keymap.set('n', '<leader>ld', function()
-  vim.cmd 'Copilot disable'
-  vim.notify 'Copilot disabled'
-end, { desc = '[d]isable' })
-vim.keymap.set('n', '<leader>le', function()
-  vim.cmd 'Copilot enable'
-  vim.notify 'Copilot enabled'
-end, { desc = '[e]nable' })
-vim.keymap.set('n', '<leader>ls', '<cmd>Copilot status<CR>', { desc = '[s]tatus' })
+-- vim.keymap.set('n', '<leader>ld', function()
+--   vim.cmd 'Copilot disable'
+--   vim.notify 'Copilot disabled'
+-- end, { desc = '[d]isable' })
+-- vim.keymap.set('n', '<leader>le', function()
+--   vim.cmd 'Copilot enable'
+--   vim.notify 'Copilot enabled'
+-- end, { desc = '[e]nable' })
+-- vim.keymap.set('n', '<leader>ls', '<cmd>Copilot status<CR>', { desc = '[s]tatus' })
 
 -- move selected lines
 vim.keymap.set('v', 'K', ":m '<-2<CR>gv=gv")

@@ -13,11 +13,11 @@ return {
     spec = {
       { '<leader>c', group = '[c]ode' },
       { '<leader>b', group = '[b]uffers' },
-      { '<leader>l', group = 'copi[l]ot' },
+      -- { '<leader>l', group = 'copi[l]ot' },
       { '<leader>s', group = '[s]earch' },
       { '<leader>t', group = '[t]oggle' },
       { '<leader>o', group = '[o]bsidian' },
-      { '<leader>y', group = '[y]anking' },
+      { '<leader>y', group = '[y]ank' },
       { '<leader>g', group = '[g]it', mode = { 'n', 'v' } },
     },
   },
