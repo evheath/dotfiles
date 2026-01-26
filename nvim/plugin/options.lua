@@ -72,6 +72,7 @@ vim.opt.termguicolors = true
 
 -- word wrap enabled by default
 vim.opt.wrap = true
+vim.opt.linebreak = true
 
 -- no swaps
 vim.opt.swapfile = false
