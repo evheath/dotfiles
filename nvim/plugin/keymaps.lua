@@ -3,6 +3,10 @@
 -- <C-*> ⌃ control
 -- <S-*> 󰘶 shift
 
+-- vertical cursor movement for wrapped lines
+vim.keymap.set('n', 'j', "v:count == 0 ? 'gj' : 'j'", { noremap = true, expr = true })
+vim.keymap.set('n', 'k', "v:count == 0 ? 'gk' : 'k'", { noremap = true, expr = true })
+
 -- disable horizontal scrolling
 vim.keymap.set('', '<ScrollWheelLeft>', '<Nop>', { noremap = true, silent = true })
 vim.keymap.set('', '<ScrollWheelRight>', '<Nop>', { noremap = true, silent = true })
@@ -83,22 +87,18 @@ vim.keymap.set('n', '<leader>yp', function()
   local path = vim.fn.expand '%:~:.'
   vim.fn.setreg('+', path)
   print('Copied: ' .. path)
-end, { desc = 'yank relative [p]ath' })
+end, { desc = 'relative [p]ath' })
 vim.keymap.set('n', '<leader>yP', function()
   local path = vim.fn.expand '%:p'
   vim.fn.setreg('+', path)
   print('Copied: ' .. path)
-end, { desc = 'yank absolute [P]ath' })
+end, { desc = 'absolute [P]ath' })
 vim.keymap.set('n', '<leader>yf', function()
   local path = vim.fn.expand '%:t'
   vim.fn.setreg('+', path)
   print('Copied: ' .. path)
-end, { desc = 'yank [f]ilename' })
-vim.keymap.set('n', '<leader>ya', '<cmd>%y<CR>', { desc = 'yank [a]ll in buffer' })
-
--- comments
--- vim.keymap.set('n', '<M-/>', 'gcc', { desc = 'comment', remap = true })
--- vim.keymap.set('v', '<M-/>', 'gc', { desc = 'comment', remap = true })
+end, { desc = '[f]ilename' })
+vim.keymap.set('n', '<leader>ya', '<cmd>%y<CR>', { desc = '[a]ll in buffer' })
 
 -- void
 vim.keymap.set('x', '<leader>p', [["_dp]], { desc = 'void paste' })
