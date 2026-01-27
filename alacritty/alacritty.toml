@@ -16,10 +16,10 @@ size = 16
 [window]
 startup_mode = "Maximized"
 option_as_alt = "Both"
-decorations = "Transparent"
-# decorations = "Buttonless"
+# decorations = "Transparent"
+decorations = "Buttonless"
 # padding = { x = 4, y = 4 }
-# padding = { x = 0, y = 4 }
+# padding = { x = 0, y = 16 }
 dynamic_padding = true
 # opacity = 0.55
 # blur = true
