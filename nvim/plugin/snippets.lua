@@ -61,6 +61,7 @@ ls.add_snippets('ruby', {
 ls.add_snippets('eruby', {
   s('comment', fmt('<%# {} %>', { i(0) })),
   s('output', fmt('<%= {} %>', { i(0) })),
+  s('debug', fmt('<%= debug {} %>', { i(0) })),
   s('execute', fmt('<% {} %>', { i(0) })),
   s('if', fmt('<% if {} %>\n  {}\n<% end %>', { i(1, 'condition'), i(0) })),
   s('ife', fmt('<% if {} %>\n  {}\n<% else %>\n  {}\n<% end %>', { i(1, 'condition'), i(2), i(0) })),
