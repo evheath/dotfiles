@@ -64,6 +64,15 @@ vim.keymap.set('n', '<Esc>', function()
   end
 end)
 
+-- auto-save on leaving insert mode (for specific filetypes)
+local autosave_filetypes = { 'markdown' }
+vim.keymap.set('i', '<Esc>', function()
+  if vim.tbl_contains(autosave_filetypes, vim.bo.filetype) then
+    return '<Esc><cmd>silent! write<CR>'
+  end
+  return '<Esc>'
+end, { expr = true, desc = 'exit insert and save' })
+
 -- terminal
 vim.keymap.set('t', '<Esc><Esc>', '<C-\\><C-n>', { desc = 'terminal to normal mode' })
 -- vim.keymap.set('t', '<M-l>', '<C-l>', { desc = 'clear terminal' })
