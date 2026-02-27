@@ -46,6 +46,9 @@ vim.keymap.set('n', '<C-q>', '<C-w>q', { desc = 'Close Window' })
 -- vim.keymap.set('n', '<M-j>', '<C-w>j', { desc = 'Move focus to the lower window' })
 -- vim.keymap.set('n', '<M-k>', '<C-w>k', { desc = 'Move focus to the upper window' })
 
+-- auto-save on escape (for specific filetypes)
+local autosave_filetypes = { 'markdown' }
+
 -- Escape
 vim.keymap.set('n', '<Esc>', function()
   vim.cmd 'NoiceDismiss' -- clear notifications
@@ -62,10 +65,12 @@ vim.keymap.set('n', '<Esc>', function()
     vim.cmd 'diffoff' -- toggle diff off
     vim.cmd 'only' -- toggle diff off
   end
+
+  if vim.tbl_contains(autosave_filetypes, vim.bo.filetype) then
+    vim.cmd 'silent! write'
+  end
 end)
 
--- auto-save on leaving insert mode (for specific filetypes)
-local autosave_filetypes = { 'markdown' }
 vim.keymap.set('i', '<Esc>', function()
   if vim.tbl_contains(autosave_filetypes, vim.bo.filetype) then
     return '<Esc><cmd>silent! write<CR>'
@@ -122,6 +127,10 @@ vim.keymap.set('n', '<leader>tr', ':set relativenumber! <CR>', { desc = '[r]elat
 vim.keymap.set('n', '<leader>tn', ':set nu! relativenumber!<CR>', { desc = 'line [n]umbers' })
 vim.keymap.set('n', '<leader>tB', '<cmd>Gitsigns blame<CR>', { desc = 'git [B]lame' })
 vim.keymap.set('n', '<leader>tb', '<cmd>Gitsigns toggle_current_line_blame<CR>', { desc = 'git [b]lame line' })
+vim.keymap.set('n', '<leader>tf', function()
+  vim.g.disable_autoformat = not vim.g.disable_autoformat
+  vim.notify('Format on save: ' .. (vim.g.disable_autoformat and 'OFF' or 'ON'))
+end, { desc = '[f]ormat on save' })
 vim.keymap.set('n', '<leader>ts', function()
   vim.wo.spell = not vim.wo.spell
   print('Spell check ' .. (vim.wo.spell and 'enabled' or 'disabled'))
