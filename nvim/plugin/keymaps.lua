@@ -19,12 +19,10 @@ vim.keymap.set('n', '-', '<cmd>Oil<CR>', { desc = 'Open oil, here' })
 vim.keymap.set('n', '_', '<cmd>Oil .<CR>', { desc = 'Open oil, project' })
 
 -- em dash (Option+- / Shift+Option+-)
-vim.keymap.set({ 'n', 'i' }, '<M-->', function()
-  vim.api.nvim_put({ '—' }, 'c', true, true)
-end, { desc = 'Insert em dash' })
-vim.keymap.set({ 'n', 'i' }, '<M-_>', function()
-  vim.api.nvim_put({ '—' }, 'c', true, true)
-end, { desc = 'Insert em dash' })
+vim.keymap.set('i', '<M-->', '—', { desc = 'Insert em dash' })
+vim.keymap.set('i', '<M-_>', '—', { desc = 'Insert em dash' })
+vim.keymap.set('n', '<M-->', 'a—<Esc>', { desc = 'Insert em dash' })
+vim.keymap.set('n', '<M-_>', 'a—<Esc>', { desc = 'Insert em dash' })
 
 -- notifications
 vim.keymap.set('n', '<leader>sn', '<cmd>Telescope noice<CR>', { desc = '[n]otifications' })
