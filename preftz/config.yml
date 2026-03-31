@@ -1,0 +1,8 @@
+# Where to clone app repos
+repo_dir: ~/code/ftz
+
+# Heroku team name (used to list available apps)
+heroku_team: precisionftz
+
+# GitHub org (used to find repos for cloning)
+github_org: Precision-FTZ

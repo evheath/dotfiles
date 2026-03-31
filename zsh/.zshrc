@@ -9,6 +9,7 @@ export PATH="$PNPM_HOME:$PATH"
 export PATH=/Users/elliot/flutter/bin:$PATH
 export PATH=/Users/elliot/Library/Android/sdk/platform-tools:$PATH
 export PATH=~/.npm-global/bin:$PATH
+export PATH=/Users/elliot/code/ftz/preftz-cli/bin:$PATH
 export PATH="$PATH:$(go env GOPATH)/bin"
 
 # Google cloud
