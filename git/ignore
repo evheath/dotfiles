@@ -1,0 +1,9 @@
+.DS_Store
+CLAUDE.md
+GLOSSARY.md
+
+**/.claude/settings.local.json
+
+TODO.md
+.mcp.json
+bin/dbhub
