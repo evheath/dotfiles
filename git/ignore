@@ -7,3 +7,4 @@ GLOSSARY.md
 TODO.md
 .mcp.json
 bin/dbhub
+bin/sftp-mcp
