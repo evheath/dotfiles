@@ -73,7 +73,30 @@ Just open `nvim` — Lazy installs plugins and Mason installs LSPs on first laun
 - **flutter / Android SDK**: expected at `~/flutter` and `~/Library/Android/sdk`
 - **preftz-cli**: personal project, expected at `~/code/ftz/preftz-cli` — skip if N/A
 
-## 9. Fonts / terminal
+## 9. Manual installs (no Homebrew cask exists)
+
+App Store only — sign in and install (the Brewfile's `mas` lines automate
+these; this list is the fallback if installing by hand):
+
+- Xcode
+- Magnet
+- Amphetamine
+- Trello
+- Keynote / Pages / Numbers
+
+(Slack, Word, Excel, OneNote, and DevCleaner are in the App Store too but
+also have casks, so `brew bundle` can cover them either way.)
+
+Direct download, no cask:
+
+- FileZilla — filezilla-project.org
+- pCloud Drive — pcloud.com
+- SmartSet App — kinesis-ergo.com (Kinesis keyboard config)
+- The homemade Automator apps (ESV/LMB/SDC automator, Close All
+  Applications, "Finder, Close All") — copy the .app bundles from the old
+  machine if still wanted
+
+## 10. Fonts / terminal
 
 Alacritty (primary terminal) and the Hack Nerd Font come from the Brewfile.
 A Ghostty config is also in the repo and linked; install the cask

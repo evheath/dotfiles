@@ -60,6 +60,64 @@ cask "font-symbols-only-nerd-font"
 cask "claude-code"
 # cask "libreoffice"
 
+# --- Apps (previously installed by hand on the old machine) ---
+# Dev
+cask "visual-studio-code"
+cask "sublime-text"
+cask "iterm2"
+cask "docker-desktop"
+cask "postman"
+cask "mongodb-compass"
+cask "mysqlworkbench"
+cask "pgadmin4"
+cask "postico"
+cask "responsively"
+# cask "android-studio"
+# FileZilla has no cask — download from filezilla-project.org (or use lftp above)
+
+# Browsers
+cask "google-chrome"
+cask "firefox"
+# cask "arc"
+cask "brave-browser"
+cask "zen"
+
+# Productivity / utilities
+cask "1password"
+cask "alfred"
+cask "bettertouchtool"
+cask "karabiner-elements"
+cask "notion"
+cask "obsidian"
+cask "claude"
+# cask "logi-options+"     # Logitech hardware
+# pCloud Drive has no cask — download from pcloud.com
+
+# Comms
+cask "microsoft-teams"
+cask "zoom"
+# cask "discord"
+
+# Other
+# cask "openvpn-connect"   # work VPN client may differ
+# cask "mactex"            # full TeX distribution, ~5GB
+
+# --- Mac App Store apps (requires: signed into App Store) ---
+brew "mas"
+mas "Xcode", id: 497799835
+mas "Slack for Desktop", id: 803453959
+mas "Magnet", id: 441258766
+mas "Amphetamine", id: 937984704
+mas "Microsoft Word", id: 462054704
+mas "Microsoft Excel", id: 462058435
+mas "Microsoft OneNote", id: 784801555
+mas "Trello", id: 1278508951
+mas "DevCleaner for Xcode", id: 1388020431
+mas "Keynote", id: 361285480
+mas "Pages", id: 361309726
+mas "Numbers", id: 361304891
+# Personal, install if wanted: Amazon Kindle, Twitter, Timer, GarageBand, iMovie
+
 # --- Go tools (mostly Go/protobuf dev helpers used by nvim) ---
 go "golang.org/x/tools/gopls"
 go "github.com/go-delve/delve/cmd/dlv"
