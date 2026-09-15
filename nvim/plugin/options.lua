@@ -82,8 +82,8 @@ vim.opt.backup = false
 vim.opt.spelllang = { 'en_us' }
 vim.opt.spellcapcheck = '' -- disable capitalization checks
 
--- folding
-vim.wo.foldmethod = 'expr'
-vim.wo.foldexpr = 'v:lua.vim.treesitter.foldexpr()'
-vim.wo.foldlevel = 99 -- Don't auto-close folds
-vim.wo.foldenable = true -- Allow folding, but don't close anything by default
+-- folding (managed by nvim-ufo; foldmethod/foldexpr are set by ufo itself)
+vim.opt.foldcolumn = '0'
+vim.opt.foldlevel = 99 -- ufo needs a large value
+vim.opt.foldlevelstart = 99
+vim.opt.foldenable = true
