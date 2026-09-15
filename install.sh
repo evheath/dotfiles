@@ -37,7 +37,7 @@ link() {
 link nvim        "$CONFIG/nvim"
 link sesh        "$CONFIG/sesh"
 link tmuxinator  "$CONFIG/tmuxinator"
-link alacritty   "$CONFIG/alacritty" # legacy, superseded by ghostty
+link alacritty   "$CONFIG/alacritty"
 
 # Single-file links (parent dirs hold untracked state, e.g. tmux plugins)
 link zsh/.zshrc            "$HOME/.zshrc"

@@ -53,7 +53,8 @@ brew "trufflehog"
 # brew "ios-deploy"
 
 # --- Casks ---
-cask "ghostty"
+cask "alacritty" # primary terminal (installed manually on the old machine, via brew here)
+# cask "ghostty"
 cask "font-hack-nerd-font"
 cask "font-symbols-only-nerd-font"
 cask "claude-code"

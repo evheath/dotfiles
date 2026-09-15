@@ -75,5 +75,6 @@ Just open `nvim` — Lazy installs plugins and Mason installs LSPs on first laun
 
 ## 9. Fonts / terminal
 
-Ghostty and the Hack Nerd Font come from the Brewfile. The `alacritty/`
-config in this repo is legacy and only linked for completeness.
+Alacritty (primary terminal) and the Hack Nerd Font come from the Brewfile.
+A Ghostty config is also in the repo and linked; install the cask
+(commented in the Brewfile) if you want it.
