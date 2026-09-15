@@ -1,5 +1,5 @@
 # zsh
-export ZSH="/Users/elliot/.oh-my-zsh"
+export ZSH="$HOME/.oh-my-zsh"
 # ZSH_THEME="robbyrussell"
 plugins=(git)
 source $ZSH/oh-my-zsh.sh
@@ -7,18 +7,18 @@ source $ZSH/oh-my-zsh.sh
 # PATH
 export PATH="$PNPM_HOME:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
-export PATH=/Users/elliot/flutter/bin:$PATH
-export PATH=/Users/elliot/Library/Android/sdk/platform-tools:$PATH
+export PATH=$HOME/flutter/bin:$PATH
+export PATH=$HOME/Library/Android/sdk/platform-tools:$PATH
 export PATH=~/.npm-global/bin:$PATH
-export PATH=/Users/elliot/code/ftz/preftz-cli/bin:$PATH
-export PATH="$PATH:$(go env GOPATH)/bin"
+export PATH=$HOME/code/ftz/preftz-cli/bin:$PATH
+command -v go >/dev/null && export PATH="$PATH:$(go env GOPATH)/bin"
 
 # Google cloud
-if [ -f '/Users/elliot/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/elliot/google-cloud-sdk/path.zsh.inc'; fi
-if [ -f '/Users/elliot/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/elliot/google-cloud-sdk/completion.zsh.inc'; fi
+if [ -f "$HOME/google-cloud-sdk/path.zsh.inc" ]; then . "$HOME/google-cloud-sdk/path.zsh.inc"; fi
+if [ -f "$HOME/google-cloud-sdk/completion.zsh.inc" ]; then . "$HOME/google-cloud-sdk/completion.zsh.inc"; fi
 
 # non-PATH exports
-export PNPM_HOME="/Users/elliot/Library/pnpm"
+export PNPM_HOME="$HOME/Library/pnpm"
 # export EDITOR="/Applications/Visual\ Studio\ Code.app/Contents/MacOS/Electron"
 export EDITOR=nvim
 export XDG_CONFIG_HOME="$HOME/.config"
@@ -74,7 +74,7 @@ function y() {
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
 # ruby/rbenv
-eval "$(rbenv init - --no-rehash zsh)"
+command -v rbenv >/dev/null && eval "$(rbenv init - --no-rehash zsh)"
 
 # starship https://starship.rs/
 eval "$(starship init zsh)"
@@ -85,4 +85,4 @@ eval "$(zoxide init zsh)"
 
 
 # bun completions
-[ -s "/Users/elliot/.bun/_bun" ] && source "/Users/elliot/.bun/_bun"
+[ -s "$HOME/.bun/_bun" ] && source "$HOME/.bun/_bun"
