@@ -8,3 +8,5 @@ TODO.md
 .mcp.json
 bin/dbhub
 bin/sftp-mcp
+bin/mcp-sftp
+bin/mcp-db
